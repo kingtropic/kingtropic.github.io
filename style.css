@@ -1012,12 +1012,17 @@ footer {
 }
 
 .exp-card:hover {
-    transform: translateY(-20px) scale(1.18);  /* 18% bigger = magnified! */
+    transform: translateY(-20px) scale(1.05);  /* Just a subtle lift, no card zoom */
     border-color: var(--gold);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 60px var(--gold-glow);
     background: var(--bg-card-hover);
-    z-index: 100;  /* Floats above all other cards */
-    transform-origin: center center;  /* Scales from the center */
+    z-index: 100;
+}
+
+/* Magnify the logo inside the card on hover */
+.exp-card:hover .exp-logo-wrapper img {
+    transform: scale(1.4);  /* Zooms the logo 140% — huge magnification */
+    padding: 4px;           /* Shrinks the white border so the logo fills the box */
 }
 
 /* --- Logo Wrapper --- */
