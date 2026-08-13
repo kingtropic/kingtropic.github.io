@@ -992,6 +992,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-top: 10px;
+   align-items: start; 
 }
 
 /* --- Individual Card --- */
