@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gajitha Nanayakkara · Robotics Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for a clean, technical look -->
+    <!-- Google Fonts: Sora for elegant headings, Inter for clean body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- ============================================================ -->
-    <!-- NAVIGATION                                                    -->
+    <!-- NAVIGATION                                                   -->
     <!-- ============================================================ -->
     <nav>
         <div class="container nav-container">
@@ -26,7 +26,6 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#cv" class="nav-cv">CV</a></li>
             </ul>
-            <!-- Mobile Hamburger -->
             <div class="hamburger" id="hamburger">
                 <span></span><span></span><span></span>
             </div>
@@ -34,73 +33,71 @@
     </nav>
 
     <!-- ============================================================ -->
-    <!-- HERO SECTION                                                 -->
+    <!-- HERO SECTION - Black & Gold Glamour                         -->
     <!-- ============================================================ -->
     <header id="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-glow"></div>
         <div class="container hero-content">
             <div class="hero-text">
+                <div class="gold-badge">ROBOTICS &amp; MECHATRONICS</div>
                 <h1>Robotics Engineer <br><span class="highlight">&amp; Researcher</span></h1>
                 <p class="tagline">
-                    Designing robotic mechanisms, intelligent interfaces, and experimental systems at the intersection of mechanical design, control, and human–robot interaction.
+                    Designing intelligent mechanisms, wearable interfaces, and experimental systems at the intersection of mechanical design, control, and human–robot interaction.
                 </p>
                 <div class="hero-keywords">
                     <span>MECHANISM DESIGN</span>
-                    <span>·</span>
+                    <span class="dot">·</span>
                     <span>ROBOTICS</span>
-                    <span>·</span>
-                    <span>HUMAN–ROBOT INTERACTION</span>
+                    <span class="dot">·</span>
+                    <span>HRI</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#research" class="btn btn-primary">View Research</a>
+                    <a href="#research" class="btn btn-primary">Explore Research</a>
                     <a href="#" class="btn btn-outline">Download CV</a>
                 </div>
             </div>
             <div class="hero-image">
                 <!-- ========================================================= -->
                 <!-- PLACEHOLDER FOR HERO IMAGE                                 -->
-                <!-- REPLACE the src with your actual hero composite image      -->
-                <!-- Example: src="images/hero-robot-composite.jpg"             -->
+                <!-- REPLACE src with: images/hero-robot-composite.jpg          -->
                 <!-- ========================================================= -->
                 <div class="image-placeholder-large">
                     [ HERO ROBOT COMPOSITE ]
-                    <span style="font-size:0.8rem; display:block; margin-top:10px; font-family: monospace;">
-                        Suggested: Surgical Manipulator + IMU Glove + Five-Bar
+                    <span style="font-size:0.7rem; display:block; margin-top:10px; font-family: monospace; color: var(--gold);">
+                        Surgical Manipulator + IMU Glove + Five-Bar
                     </span>
                     <!-- <img src="images/hero-robot-composite.jpg" alt="Robotic systems composite"> -->
                 </div>
-                <!-- VIDEO PLACEHOLDER: Uncomment below if you have a looping hero video -->
+                <!-- VIDEO PLACEHOLDER -->
                 <!-- <video src="videos/hero-robot-demo.mp4" autoplay loop muted playsinline></video> -->
             </div>
         </div>
     </header>
 
     <!-- ============================================================ -->
-    <!-- RESEARCH / FEATURED WORK SECTION                             -->
+    <!-- SELECTED RESEARCH (FEATURED PROJECTS)                        -->
     <!-- ============================================================ -->
     <section id="research">
         <div class="container">
-            <h2 class="section-title">Selected Research</h2>
-            <p class="section-subtitle">Featured projects from my recent work in robotic systems and experimental validation.</p>
+            <div class="section-header">
+                <h2 class="section-title">Selected Research</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Featured projects from my recent work in robotic systems and experimental validation.</p>
+            </div>
 
             <!-- Project 1: IMU Glove -->
             <div class="project-card">
                 <div class="project-visual">
-                    <!-- ========================================================= -->
-                    <!-- PLACEHOLDER FOR IMU GLOVE IMAGE                           -->
-                    <!-- REPLACE src with: images/project-imu-glove.jpg            -->
-                    <!-- ========================================================= -->
                     <div class="image-placeholder">
                         [ IMU GLOVE PROTOTYPE ]
                         <!-- <img src="images/project-imu-glove.jpg" alt="IMU Glove and Robotic Finger"> -->
                     </div>
-                    <!-- VIDEO PLACEHOLDER -->
                     <!-- <video src="videos/imu-glove-demo.mp4" autoplay loop muted playsinline></video> -->
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
+                    <span class="project-category">Wearable Sensing · Kinematics</span>
                     <h3>Minimalist IMU-Based Glove for <br>Real-Time Finger Tracking</h3>
-                    <p class="project-tags">Wearable sensing · Kinematics · Control</p>
                     <p class="project-brief">
                         A 2-IMU glove with potentiometer calibration enables real-time teleoperation of a 4-DoF robotic finger. 
                         Validated through D-H modeling, MATLAB, and physical experimentation.
@@ -113,13 +110,9 @@
                 </div>
             </div>
 
-            <!-- Project 2: Surgical RCM Manipulator -->
+            <!-- Project 2: Surgical RCM -->
             <div class="project-card reverse">
                 <div class="project-visual">
-                    <!-- ========================================================= -->
-                    <!-- PLACEHOLDER FOR SURGICAL ROBOT IMAGE                      -->
-                    <!-- REPLACE src with: images/project-surgical-robot.jpg       -->
-                    <!-- ========================================================= -->
                     <div class="image-placeholder">
                         [ SURGICAL RCM MANIPULATOR ]
                         <!-- <img src="images/project-surgical-robot.jpg" alt="Surgical RCM Manipulator"> -->
@@ -127,8 +120,8 @@
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
+                    <span class="project-category">Mechanism Design · ROS2</span>
                     <h3>Design &amp; Realization of a <br>Surgical Manipulator</h3>
-                    <p class="project-tags">Mechanism Design · ROS2 · Teleoperation</p>
                     <p class="project-brief">
                         A compact RCM mechanism achieving pitch, yaw, and translation. Integrated with ROS2, DYNAMIXEL servos, 
                         and haptic teleoperation. Reduced mechanical footprint by 50%.
@@ -141,13 +134,9 @@
                 </div>
             </div>
 
-            <!-- Project 3: Mode-Switching Five-Bar -->
+            <!-- Project 3: Mode-Switching -->
             <div class="project-card">
                 <div class="project-visual">
-                    <!-- ========================================================= -->
-                    <!-- PLACEHOLDER FOR MODE-SWITCHING IMAGE                      -->
-                    <!-- REPLACE src with: images/project-mode-switching.jpg       -->
-                    <!-- ========================================================= -->
                     <div class="image-placeholder">
                         [ MODE-SWITCHING MECHANISM ]
                         <!-- <img src="images/project-mode-switching.jpg" alt="Mode-Switching Linear-Rotary Mechanism"> -->
@@ -155,8 +144,8 @@
                     <div class="project-year">2026</div>
                 </div>
                 <div class="project-info">
+                    <span class="project-category">Actuation · Prototyping</span>
                     <h3>Mode-Switching Linear–Rotary <br>Actuation Mechanism</h3>
-                    <p class="project-tags">Actuation · Prototyping · Control</p>
                     <p class="project-brief">
                         A compact five-bar mechanism that switches between rotary and linear motion using a servo-driven selector.
                         Achieved switching times as low as 0.344s.
@@ -169,13 +158,9 @@
                 </div>
             </div>
 
-            <!-- Project 4: Parallel Five-Bar Leg -->
+            <!-- Project 4: Five-Bar Leg -->
             <div class="project-card reverse">
                 <div class="project-visual">
-                    <!-- ========================================================= -->
-                    <!-- PLACEHOLDER FOR FIVE-BAR LEG IMAGE                        -->
-                    <!-- REPLACE src with: images/project-five-bar-leg.jpg         -->
-                    <!-- ========================================================= -->
                     <div class="image-placeholder">
                         [ FIVE-BAR BIPEDAL LEG ]
                         <!-- <img src="images/project-five-bar-leg.jpg" alt="Five-Bar Bipedal Leg Architecture"> -->
@@ -183,8 +168,8 @@
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
+                    <span class="project-category">Closed-chain · Kinematics</span>
                     <h3>Parallel Five-Bar Leg <br>Architecture</h3>
-                    <p class="project-tags">Closed-chain · Kinematics · Bipedal</p>
                     <p class="project-brief">
                         Analytical research into a closed-chain five-bar mechanism designed to reproduce serial-leg-like 
                         foot trajectories for improved stability and rigidity.
@@ -197,13 +182,9 @@
                 </div>
             </div>
 
-            <!-- Project 5: TPU Material Characterization -->
+            <!-- Project 5: TPU -->
             <div class="project-card">
                 <div class="project-visual">
-                    <!-- ========================================================= -->
-                    <!-- PLACEHOLDER FOR TPU IMAGE                                 -->
-                    <!-- REPLACE src with: images/project-tpu.jpg                  -->
-                    <!-- ========================================================= -->
                     <div class="image-placeholder">
                         [ TPU TENSILE TEST ]
                         <!-- <img src="images/project-tpu.jpg" alt="TPU Material Characterization"> -->
@@ -211,8 +192,8 @@
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
+                    <span class="project-category">Materials · FEA</span>
                     <h3>TPU Hyperelastic Material <br>Characterization</h3>
-                    <p class="project-tags">Materials · FEA · Experimentation</p>
                     <p class="project-brief">
                         Experimental characterization of 60A and 70A TPU using tensile testing. Fitted to the Yeoh 3rd Order 
                         hyperelastic model for improved FEA simulation accuracy.
@@ -232,7 +213,10 @@
     <!-- ============================================================ -->
     <section id="timeline">
         <div class="container">
-            <h2 class="section-title">Research Timeline</h2>
+            <div class="section-header center">
+                <h2 class="section-title">Research Timeline</h2>
+                <div class="gold-line"></div>
+            </div>
             <div class="timeline-grid">
                 <div class="timeline-year">
                     <h3>2024</h3>
@@ -273,7 +257,10 @@
     <!-- ============================================================ -->
     <section id="process">
         <div class="container">
-            <h2 class="section-title">How I Work</h2>
+            <div class="section-header center">
+                <h2 class="section-title">How I Work</h2>
+                <div class="gold-line"></div>
+            </div>
             <div class="process-flow">
                 <div class="process-step"><span>01</span> Problem</div>
                 <div class="process-arrow">→</div>
@@ -297,7 +284,10 @@
     <!-- ============================================================ -->
     <section id="areas">
         <div class="container">
-            <h2 class="section-title">Research Areas</h2>
+            <div class="section-header center">
+                <h2 class="section-title">Research Areas</h2>
+                <div class="gold-line"></div>
+            </div>
             <div class="areas-grid">
                 <div class="area-card">Robotic Mechanisms</div>
                 <div class="area-card">Robotic Manipulation</div>
@@ -310,11 +300,14 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- PUBLICATIONS (Placeholder)                                   -->
+    <!-- PUBLICATIONS                                                 -->
     <!-- ============================================================ -->
     <section id="publications">
         <div class="container">
-            <h2 class="section-title">Publications</h2>
+            <div class="section-header">
+                <h2 class="section-title">Publications</h2>
+                <div class="gold-line"></div>
+            </div>
             <div class="pub-list">
                 <div class="pub-item">
                     <span class="pub-year">2026</span>
@@ -343,6 +336,7 @@
         <div class="container about-container">
             <div class="about-text">
                 <h2>About Me</h2>
+                <div class="gold-line left"></div>
                 <p>
                     I am a robotics researcher and engineer interested in the design, modeling, and experimental validation of robotic systems. 
                     My work spans robotic mechanisms, wearable sensing, teleoperation, soft robotics, and mathematical modeling.
@@ -357,10 +351,6 @@
                 <a href="#" class="btn btn-primary">Download Full CV</a>
             </div>
             <div class="about-image">
-                <!-- ========================================================= -->
-                <!-- PLACEHOLDER FOR PROFILE / ABOUT IMAGE                     -->
-                <!-- REPLACE src with: images/profile-robot.jpg                -->
-                <!-- ========================================================= -->
                 <div class="image-placeholder-square">
                     [ PROFILE / LAB IMAGE ]
                     <!-- <img src="images/profile-robot.jpg" alt="Gajitha in the lab"> -->
@@ -375,6 +365,7 @@
     <section id="contact">
         <div class="container contact-content">
             <h2 class="section-title">Get In Touch</h2>
+            <div class="gold-line center"></div>
             <p>Interested in collaboration, research opportunities, or just want to chat about robotics? Reach out.</p>
             <div class="contact-info">
                 <span>📧 gajitha.n@example.com</span>
@@ -390,7 +381,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2026 Gajitha Nanayakkara. Built with ❤️ and GitHub Pages.</p>
+            <p>© 2026 Gajitha Nanayakkara. Crafted with precision.</p>
         </div>
     </footer>
 
