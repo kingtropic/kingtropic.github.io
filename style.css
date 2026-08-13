@@ -406,7 +406,7 @@ nav {
 .image-placeholder {
     width: 100%;
     aspect-ratio: 16/10;
-    background: var(--bg-primary);
+    background: #ffffff;  /* CHANGE: from black to white */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -425,7 +425,7 @@ nav {
 .project-visual video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;  /* CHANGE: from 'cover' to 'contain' */
     display: block;
 }
 
