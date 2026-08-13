@@ -1,21 +1,29 @@
 /* ================================================================
    ROOT VARIABLES - DEEP SPACE (NAVY + CYAN)
    ================================================================ */
+/* ================================================================
+   ROOT VARIABLES - CLEAN WHITE & DARK BLUE
+   ================================================================ */
 :root {
-    /* === DEEP SPACE (NAVY + CYAN) === */
-    --bg-primary: #0a0e17;
-    --bg-secondary: #111827;
-    --bg-card: #1a2236;
-    --bg-card-hover: #243050;
-    --text-primary: #ffffff;
-    --text-secondary: #94a3b8;
-    --text-muted: #475569;
+    /* Backgrounds - Clean White */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
     
-    --accent-cyan: #00d4ff;
-    --accent-cyan-light: #66e5ff;
-    --accent-cyan-dark: #0099bb;
-    --accent-glow: rgba(0, 212, 255, 0.15);
-    --border-color: #1e3a5f;
+    /* Text - Deep Navy */
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #94a3b8;
+    
+    /* Accent - Bright Blue (pops on white) */
+    --accent-cyan: #2563eb;        /* Bright Royal Blue */
+    --accent-cyan-light: #3b82f6;
+    --accent-cyan-dark: #1d4ed8;
+    --accent-glow: rgba(37, 99, 235, 0.15);
+    
+    /* Borders - Soft Gray */
+    --border-color: #e2e8f0;
     
     --font-heading: 'Sora', sans-serif;
     --font-body: 'Inter', sans-serif;
