@@ -3,151 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV & Portfolio</title>
+    <title>Gajitha Nanayakkara · Robotics Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a clean, technical look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ========== NAVIGATION ========== -->
+    <!-- ============================================================ -->
+    <!-- NAVIGATION                                                    -->
+    <!-- ============================================================ -->
     <nav>
         <div class="container nav-container">
-            <div class="logo">MyPortfolio</div>
+            <div class="logo">Gajitha</div>
             <ul class="nav-links">
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#cv" class="nav-cv">CV</a></li>
             </ul>
+            <!-- Mobile Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- ========== HERO SECTION ========== -->
+    <!-- ============================================================ -->
+    <!-- HERO SECTION                                                 -->
+    <!-- ============================================================ -->
     <header id="hero">
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
-                <p class="tagline">Web Developer | Designer | Problem Solver</p>
-                <p class="bio">I build clean, responsive, and user-friendly websites. Welcome to my digital CV and portfolio.</p>
-                <a href="#portfolio" class="btn">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Hire Me</a>
+                <h1>Robotics Engineer <br><span class="highlight">&amp; Researcher</span></h1>
+                <p class="tagline">
+                    Designing robotic mechanisms, intelligent interfaces, and experimental systems at the intersection of mechanical design, control, and human–robot interaction.
+                </p>
+                <div class="hero-keywords">
+                    <span>MECHANISM DESIGN</span>
+                    <span>·</span>
+                    <span>ROBOTICS</span>
+                    <span>·</span>
+                    <span>HUMAN–ROBOT INTERACTION</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#research" class="btn btn-primary">View Research</a>
+                    <a href="#" class="btn btn-outline">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- ========================================================= -->
+                <!-- PLACEHOLDER FOR HERO IMAGE                                 -->
+                <!-- REPLACE the src with your actual hero composite image      -->
+                <!-- Example: src="images/hero-robot-composite.jpg"             -->
+                <!-- ========================================================= -->
+                <div class="image-placeholder-large">
+                    [ HERO ROBOT COMPOSITE ]
+                    <span style="font-size:0.8rem; display:block; margin-top:10px; font-family: monospace;">
+                        Suggested: Surgical Manipulator + IMU Glove + Five-Bar
+                    </span>
+                    <!-- <img src="images/hero-robot-composite.jpg" alt="Robotic systems composite"> -->
+                </div>
+                <!-- VIDEO PLACEHOLDER: Uncomment below if you have a looping hero video -->
+                <!-- <video src="videos/hero-robot-demo.mp4" autoplay loop muted playsinline></video> -->
             </div>
         </div>
     </header>
 
-    <!-- ========== ABOUT SECTION ========== -->
-    <section id="about">
+    <!-- ============================================================ -->
+    <!-- RESEARCH / FEATURED WORK SECTION                             -->
+    <!-- ============================================================ -->
+    <section id="research">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>I am a passionate developer with 3+ years of experience in creating web applications. I love turning complex problems into elegant, simple solutions.</p>
-                    <p><strong>📍 Location:</strong> New York, USA</p>
-                    <p><strong>🎓 Education:</strong> B.S. in Computer Science</p>
-                    <p><strong>⚡ Fun Fact:</strong> I love coffee and open-source.</p>
+            <h2 class="section-title">Selected Research</h2>
+            <p class="section-subtitle">Featured projects from my recent work in robotic systems and experimental validation.</p>
+
+            <!-- Project 1: IMU Glove -->
+            <div class="project-card">
+                <div class="project-visual">
+                    <!-- ========================================================= -->
+                    <!-- PLACEHOLDER FOR IMU GLOVE IMAGE                           -->
+                    <!-- REPLACE src with: images/project-imu-glove.jpg            -->
+                    <!-- ========================================================= -->
+                    <div class="image-placeholder">
+                        [ IMU GLOVE PROTOTYPE ]
+                        <!-- <img src="images/project-imu-glove.jpg" alt="IMU Glove and Robotic Finger"> -->
+                    </div>
+                    <!-- VIDEO PLACEHOLDER -->
+                    <!-- <video src="videos/imu-glove-demo.mp4" autoplay loop muted playsinline></video> -->
+                    <div class="project-year">2025</div>
                 </div>
-                <div class="about-skills">
-                    <h3>Core Skills</h3>
+                <div class="project-info">
+                    <h3>Minimalist IMU-Based Glove for <br>Real-Time Finger Tracking</h3>
+                    <p class="project-tags">Wearable sensing · Kinematics · Control</p>
+                    <p class="project-brief">
+                        A 2-IMU glove with potentiometer calibration enables real-time teleoperation of a 4-DoF robotic finger. 
+                        Validated through D-H modeling, MATLAB, and physical experimentation.
+                    </p>
+                    <div class="project-stats">
+                        <span><strong>4 DoF</strong> Robot Finger</span>
+                        <span><strong>10–15%</strong> Posture Discrepancy</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Surgical RCM Manipulator -->
+            <div class="project-card reverse">
+                <div class="project-visual">
+                    <!-- ========================================================= -->
+                    <!-- PLACEHOLDER FOR SURGICAL ROBOT IMAGE                      -->
+                    <!-- REPLACE src with: images/project-surgical-robot.jpg       -->
+                    <!-- ========================================================= -->
+                    <div class="image-placeholder">
+                        [ SURGICAL RCM MANIPULATOR ]
+                        <!-- <img src="images/project-surgical-robot.jpg" alt="Surgical RCM Manipulator"> -->
+                    </div>
+                    <div class="project-year">2025</div>
+                </div>
+                <div class="project-info">
+                    <h3>Design &amp; Realization of a <br>Surgical Manipulator</h3>
+                    <p class="project-tags">Mechanism Design · ROS2 · Teleoperation</p>
+                    <p class="project-brief">
+                        A compact RCM mechanism achieving pitch, yaw, and translation. Integrated with ROS2, DYNAMIXEL servos, 
+                        and haptic teleoperation. Reduced mechanical footprint by 50%.
+                    </p>
+                    <div class="project-stats">
+                        <span><strong>±35°</strong> Pitch / Yaw</span>
+                        <span><strong>80 mm</strong> Translation</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 3: Mode-Switching Five-Bar -->
+            <div class="project-card">
+                <div class="project-visual">
+                    <!-- ========================================================= -->
+                    <!-- PLACEHOLDER FOR MODE-SWITCHING IMAGE                      -->
+                    <!-- REPLACE src with: images/project-mode-switching.jpg       -->
+                    <!-- ========================================================= -->
+                    <div class="image-placeholder">
+                        [ MODE-SWITCHING MECHANISM ]
+                        <!-- <img src="images/project-mode-switching.jpg" alt="Mode-Switching Linear-Rotary Mechanism"> -->
+                    </div>
+                    <div class="project-year">2026</div>
+                </div>
+                <div class="project-info">
+                    <h3>Mode-Switching Linear–Rotary <br>Actuation Mechanism</h3>
+                    <p class="project-tags">Actuation · Prototyping · Control</p>
+                    <p class="project-brief">
+                        A compact five-bar mechanism that switches between rotary and linear motion using a servo-driven selector.
+                        Achieved switching times as low as 0.344s.
+                    </p>
+                    <div class="project-stats">
+                        <span><strong>0.344 s</strong> Switching</span>
+                        <span><strong>13.33 mm/s</strong> Linear Velocity</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 4: Parallel Five-Bar Leg -->
+            <div class="project-card reverse">
+                <div class="project-visual">
+                    <!-- ========================================================= -->
+                    <!-- PLACEHOLDER FOR FIVE-BAR LEG IMAGE                        -->
+                    <!-- REPLACE src with: images/project-five-bar-leg.jpg         -->
+                    <!-- ========================================================= -->
+                    <div class="image-placeholder">
+                        [ FIVE-BAR BIPEDAL LEG ]
+                        <!-- <img src="images/project-five-bar-leg.jpg" alt="Five-Bar Bipedal Leg Architecture"> -->
+                    </div>
+                    <div class="project-year">2025</div>
+                </div>
+                <div class="project-info">
+                    <h3>Parallel Five-Bar Leg <br>Architecture</h3>
+                    <p class="project-tags">Closed-chain · Kinematics · Bipedal</p>
+                    <p class="project-brief">
+                        Analytical research into a closed-chain five-bar mechanism designed to reproduce serial-leg-like 
+                        foot trajectories for improved stability and rigidity.
+                    </p>
+                    <div class="project-stats">
+                        <span><strong>Closed-Chain</strong> Stability</span>
+                        <span><strong>Serial-like</strong> Trajectories</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 5: TPU Material Characterization -->
+            <div class="project-card">
+                <div class="project-visual">
+                    <!-- ========================================================= -->
+                    <!-- PLACEHOLDER FOR TPU IMAGE                                 -->
+                    <!-- REPLACE src with: images/project-tpu.jpg                  -->
+                    <!-- ========================================================= -->
+                    <div class="image-placeholder">
+                        [ TPU TENSILE TEST ]
+                        <!-- <img src="images/project-tpu.jpg" alt="TPU Material Characterization"> -->
+                    </div>
+                    <div class="project-year">2025</div>
+                </div>
+                <div class="project-info">
+                    <h3>TPU Hyperelastic Material <br>Characterization</h3>
+                    <p class="project-tags">Materials · FEA · Experimentation</p>
+                    <p class="project-brief">
+                        Experimental characterization of 60A and 70A TPU using tensile testing. Fitted to the Yeoh 3rd Order 
+                        hyperelastic model for improved FEA simulation accuracy.
+                    </p>
+                    <div class="project-stats">
+                        <span><strong>60A</strong> E=4.43 N/mm²</span>
+                        <span><strong>70A</strong> E=6.62 N/mm²</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- RESEARCH TIMELINE                                            -->
+    <!-- ============================================================ -->
+    <section id="timeline">
+        <div class="container">
+            <h2 class="section-title">Research Timeline</h2>
+            <div class="timeline-grid">
+                <div class="timeline-year">
+                    <h3>2024</h3>
                     <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>React & Vue.js</li>
-                        <li>Python & Node.js</li>
-                        <li>Git & GitHub</li>
+                        <li>Automated Gel Gradient System</li>
+                        <li>Minimum Contact-Point Grasping</li>
+                    </ul>
+                </div>
+                <div class="timeline-year">
+                    <h3>2025</h3>
+                    <ul>
+                        <li>Surgical RCM Manipulator</li>
+                        <li>Parallel Five-Bar Leg</li>
+                        <li>TPU Material Characterization</li>
+                        <li>IMU-Based Robotic Finger</li>
+                    </ul>
+                </div>
+                <div class="timeline-year">
+                    <h3>2026</h3>
+                    <ul>
+                        <li>Mode-Switching Five-Bar</li>
+                        <li>Space Robotics / Payload ID</li>
+                    </ul>
+                </div>
+                <div class="timeline-year future">
+                    <h3>Future</h3>
+                    <ul>
+                        <li>Minimal-Sensor Hand Pose Estimation</li>
+                        <li>Robotic Teleoperation</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== RESUME SECTION ========== -->
-    <section id="resume">
+    <!-- ============================================================ -->
+    <!-- HOW I WORK (Engineering Process)                             -->
+    <!-- ============================================================ -->
+    <section id="process">
         <div class="container">
-            <h2 class="section-title">My Resume</h2>
-            <div class="resume-grid">
-                <div class="resume-column">
-                    <h3>💼 Experience</h3>
-                    <div class="resume-item">
-                        <h4>Senior Developer</h4>
-                        <span class="company">Tech Corp Inc.</span>
-                        <span class="date">2022 - Present</span>
-                        <p>Leading a team of 5 developers building enterprise-level web applications.</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Junior Developer</h4>
-                        <span class="company">Startup XYZ</span>
-                        <span class="date">2020 - 2022</span>
-                        <p>Developed and maintained client websites using modern JavaScript frameworks.</p>
-                    </div>
+            <h2 class="section-title">How I Work</h2>
+            <div class="process-flow">
+                <div class="process-step"><span>01</span> Problem</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><span>02</span> Model</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><span>03</span> Design</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><span>04</span> Simulate</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><span>05</span> Build</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><span>06</span> Test</div>
+                <div class="process-arrow">→</div>
+                <div class="process-step"><span>07</span> Iterate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- RESEARCH AREAS                                               -->
+    <!-- ============================================================ -->
+    <section id="areas">
+        <div class="container">
+            <h2 class="section-title">Research Areas</h2>
+            <div class="areas-grid">
+                <div class="area-card">Robotic Mechanisms</div>
+                <div class="area-card">Robotic Manipulation</div>
+                <div class="area-card">Human–Robot Interaction</div>
+                <div class="area-card">Soft &amp; Compliant Robotics</div>
+                <div class="area-card">Control &amp; Software</div>
+                <div class="area-card">Space Robotics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PUBLICATIONS (Placeholder)                                   -->
+    <!-- ============================================================ -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="pub-list">
+                <div class="pub-item">
+                    <span class="pub-year">2026</span>
+                    <p>Closed-Form Identification Framework of Captured Payload Inertia for a Free-Floating Space Manipulator <span class="pub-status">[Under Review]</span></p>
                 </div>
-                <div class="resume-column">
-                    <h3>📚 Education</h3>
-                    <div class="resume-item">
-                        <h4>M.S. in Web Development</h4>
-                        <span class="company">University of Technology</span>
-                        <span class="date">2018 - 2020</span>
-                        <p>Graduated with honors. Thesis on progressive web applications.</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>B.S. in Computer Science</h4>
-                        <span class="company">State University</span>
-                        <span class="date">2014 - 2018</span>
-                        <p>Minor in Graphic Design. Dean's List all semesters.</p>
-                    </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <p>Minimalist IMU-Based Glove for Real-Time Finger Tracking for Robot Teleoperation <span class="pub-conf">AROB 2025</span></p>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2025</span>
+                    <p>Design and Realization of a Surgical Manipulator with Remote Center of Motion <span class="pub-conf">ICRA 2025 (Submitted)</span></p>
+                </div>
+                <div class="pub-item">
+                    <span class="pub-year">2024</span>
+                    <p>Determining the Minimal Number of Contact Points for Stable Grasping <span class="pub-conf">RSJ 2024</span></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== PORTFOLIO SECTION ========== -->
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="section-title">My Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: #4A90E2;">Project 1</div>
-                    <h4>Weather Dashboard</h4>
-                    <p>Real-time weather app using OpenWeather API and vanilla JS.</p>
-                    <a href="#" class="project-link">View Project →</a>
+    <!-- ============================================================ -->
+    <!-- ABOUT & CONTACT                                              -->
+    <!-- ============================================================ -->
+    <section id="about">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am a robotics researcher and engineer interested in the design, modeling, and experimental validation of robotic systems. 
+                    My work spans robotic mechanisms, wearable sensing, teleoperation, soft robotics, and mathematical modeling.
+                </p>
+                <p>
+                    My approach combines mechanical design and kinematic analysis with simulation, embedded systems, control, and physical prototyping. 
+                    Across my research projects, I focus on turning mathematical concepts into experimentally validated robotic systems.
+                </p>
+                <div class="about-equation">
+                    MECHANICAL DESIGN + MATHEMATICAL MODELING + CONTROL + PHYSICAL PROTOTYPING = ROBOTIC SYSTEMS
                 </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: #E25A4A;">Project 2</div>
-                    <h4>E-Commerce Store</h4>
-                    <p>Full-stack shopping cart with React, Node.js, and MongoDB.</p>
-                    <a href="#" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-image" style="background: #50C878;">Project 3</div>
-                    <h4>Task Manager</h4>
-                    <p>Productivity app with drag-and-drop features and local storage.</p>
-                    <a href="#" class="project-link">View Project →</a>
+                <a href="#" class="btn btn-primary">Download Full CV</a>
+            </div>
+            <div class="about-image">
+                <!-- ========================================================= -->
+                <!-- PLACEHOLDER FOR PROFILE / ABOUT IMAGE                     -->
+                <!-- REPLACE src with: images/profile-robot.jpg                -->
+                <!-- ========================================================= -->
+                <div class="image-placeholder-square">
+                    [ PROFILE / LAB IMAGE ]
+                    <!-- <img src="images/profile-robot.jpg" alt="Gajitha in the lab"> -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== CONTACT SECTION ========== -->
+    <!-- ============================================================ -->
+    <!-- CONTACT & FOOTER                                             -->
+    <!-- ============================================================ -->
     <section id="contact">
-        <div class="container">
+        <div class="container contact-content">
             <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-                <div class="contact-info">
-                    <span>📧 your.email@example.com</span>
-                    <span>📱 (123) 456-7890</span>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-btn">GitHub</a>
-                    <a href="#" class="social-btn">LinkedIn</a>
-                    <a href="#" class="social-btn">Twitter</a>
-                </div>
+            <p>Interested in collaboration, research opportunities, or just want to chat about robotics? Reach out.</p>
+            <div class="contact-info">
+                <span>📧 gajitha.n@example.com</span>
+                <span>📍 Robotics Lab · University</span>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-btn">GitHub</a>
+                <a href="#" class="social-btn">LinkedIn</a>
+                <a href="#" class="social-btn">Google Scholar</a>
             </div>
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
     <footer>
         <div class="container">
-            <p>© 2026 Your Name. Built with ❤️ and GitHub Pages.</p>
+            <p>© 2026 Gajitha Nanayakkara. Built with ❤️ and GitHub Pages.</p>
         </div>
     </footer>
 
