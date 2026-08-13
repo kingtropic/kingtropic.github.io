@@ -1015,6 +1015,7 @@ footer {
     border-color: var(--gold);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 50px var(--gold-glow);
     background: var(--bg-card-hover);
+    z-index: 10;  /* ← Add this so it floats above the others */
 }
 
 /* --- Logo Wrapper --- */
