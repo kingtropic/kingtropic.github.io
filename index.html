@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gajitha Nanayakkara · Robotics Engineer & Researcher specializing in mechanism design, human-robot interaction, and robotic manipulation.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gajitha Nanayakkara · Robotics Engineer & Researcher specializing in mechanism design, human-robot interaction, and robotic manipulation." />
     <title>Gajitha Nanayakkara · Robotics Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
     <!-- ============================================================ -->
-    <!-- LOADING ANIMATION                                             -->
+    <!-- LOADER                                                        -->
     <!-- ============================================================ -->
-    <div id="loader">
+    <div id="loader" role="status" aria-label="Loading">
         <div class="loader-ring"></div>
     </div>
 
     <!-- ============================================================ -->
-    <!-- NAVIGATION                                                   -->
+    <!-- NAVIGATION                                                    -->
     <!-- ============================================================ -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <div class="logo">Gajitha Nanayakkara</div>
+            <a href="#hero" class="logo" aria-label="Home">Gajitha Nanayakkara</a>
             <ul class="nav-links">
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#cv" class="nav-cv">CV</a></li>
+                <li><a href="#" class="nav-cv">CV</a></li>
             </ul>
-            <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- ============================================================ -->
-    <!-- HERO SECTION                                                 -->
+    <!-- HERO                                                          -->
     <!-- ============================================================ -->
     <header id="hero">
         <div class="hero-glow"></div>
         <div class="hero-glow-2"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <div class="gold-badge">ROBOTICS &amp; MECHATRONICS</div>
-                <h1>Robotics Engineer <br><span class="highlight"> Researcher</span> <br><span class="highlight">&amp; Tutor</span></h1>
+                <div class="gold-badge">Robotics &amp; Mechatronics</div>
+                <h1>Robotics Engineer <br /><span class="highlight">Researcher</span> <br /><span class="highlight">&amp; Tutor</span></h1>
                 <p class="tagline">
                     Designing intelligent mechanisms, wearable interfaces, and experimental systems at the intersection of mechanical design, control, and human–robot interaction.
                 </p>
                 <div class="hero-keywords">
-                    <span>MECHANISM DESIGN</span>
+                    <span>Mechanism Design</span>
                     <span class="dot">·</span>
-                    <span>ROBOTICS</span>
+                    <span>Robotics</span>
                     <span class="dot">·</span>
                     <span>HRI</span>
                 </div>
@@ -66,151 +69,146 @@
             </div>
             <div class="hero-image">
                 <div class="image-placeholder-large">
-                    <img src="images/hero-robot-composite.jpg" alt="Robotic systems composite">
+                    <img src="images/hero-robot-composite.jpg" alt="Robotic systems composite" width="800" height="600" loading="eager" fetchpriority="high" />
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" aria-hidden="true">
             <span>Scroll</span>
             <div class="scroll-arrow"></div>
         </div>
     </header>
 
     <!-- ============================================================ -->
-    <!-- SELECTED RESEARCH                                             -->
+    <!-- RESEARCH                                                      -->
     <!-- ============================================================ -->
-    <section id="research">
+    <section id="research" aria-labelledby="research-title">
         <div class="container">
             <div class="section-header reveal">
-                <h2 class="section-title">Selected Research</h2>
+                <h2 id="research-title" class="section-title">Selected Research</h2>
                 <div class="gold-line"></div>
                 <p class="section-subtitle">Featured projects from my recent work in robotic systems and experimental validation.</p>
             </div>
 
             <!-- Project 1: IMU Glove -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
-                        <img src="images/project-imu-glove.jpg" alt="IMU Glove and Robotic Finger">
+                        <img src="images/project-imu-glove.jpg" alt="IMU Glove and Robotic Finger" width="640" height="400" loading="lazy" />
                     </div>
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">Wearable Sensing · Kinematics</span>
-                    <h3>Minimalist IMU-Based Glove for <br>Real-Time Finger Tracking</h3>
+                    <h3>Minimalist IMU-Based Glove for Real-Time Finger Tracking</h3>
                     <p class="project-brief">
-                        A 2-IMU glove with potentiometer calibration enables real-time teleoperation of a 4-DoF robotic finger. 
-                        Validated through D-H modeling, MATLAB, and physical experimentation.
+                        A 2-IMU glove with potentiometer calibration enables real-time teleoperation of a 4-DoF robotic finger. Validated through D-H modeling, MATLAB, and physical experimentation.
                     </p>
                     <div class="project-stats">
                         <span><strong>4 DoF</strong> Robot Finger</span>
                         <span><strong>10–15%</strong> Posture Discrepancy</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
                 </div>
-            </div>
+            </article>
 
             <!-- Project 2: Surgical RCM -->
-            <div class="project-card reverse reveal">
+            <article class="project-card reverse reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
-                        <img src="images/project-surgical-robot.jpg" alt="Surgical RCM Manipulator">
+                        <img src="images/project-surgical-robot.jpg" alt="Surgical RCM Manipulator" width="640" height="400" loading="lazy" />
                     </div>
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">Mechanism Design · ROS2</span>
-                    <h3>Design &amp; Realization of a <br>Surgical Manipulator</h3>
+                    <h3>Design &amp; Realization of a Surgical Manipulator</h3>
                     <p class="project-brief">
-                        A compact RCM mechanism achieving pitch, yaw, and translation. Integrated with ROS2, DYNAMIXEL servos, 
-                        and haptic teleoperation. Reduced mechanical footprint by 50%.
+                        A compact RCM mechanism achieving pitch, yaw, and translation. Integrated with ROS2, DYNAMIXEL servos, and haptic teleoperation. Reduced mechanical footprint by 50%.
                     </p>
                     <div class="project-stats">
                         <span><strong>±35°</strong> Pitch / Yaw</span>
                         <span><strong>80 mm</strong> Translation</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
                 </div>
-            </div>
+            </article>
 
             <!-- Project 3: Mode-Switching -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
-                        <img src="images/project-mode-switching.jpg" alt="Mode-Switching Linear-Rotary Mechanism">
+                        <img src="images/project-mode-switching.jpg" alt="Mode-Switching Linear-Rotary Mechanism" width="640" height="400" loading="lazy" />
                     </div>
                     <div class="project-year">2026</div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">Actuation · Prototyping</span>
-                    <h3>Mode-Switching Linear–Rotary <br>Actuation Mechanism</h3>
+                    <h3>Mode-Switching Linear–Rotary Actuation Mechanism</h3>
                     <p class="project-brief">
-                        A compact five-bar mechanism that switches between rotary and linear motion using a servo-driven selector.
-                        Achieved switching times as low as 0.344s.
+                        A compact five-bar mechanism that switches between rotary and linear motion using a servo-driven selector. Achieved switching times as low as 0.344s.
                     </p>
                     <div class="project-stats">
                         <span><strong>0.344 s</strong> Switching</span>
                         <span><strong>13.33 mm/s</strong> Linear Velocity</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
                 </div>
-            </div>
+            </article>
 
             <!-- Project 4: Five-Bar Leg -->
-            <div class="project-card reverse reveal">
+            <article class="project-card reverse reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
-                        <img src="images/project-five-bar-leg.jpg" alt="Five-Bar Bipedal Leg Architecture">
+                        <img src="images/project-five-bar-leg.jpg" alt="Five-Bar Bipedal Leg Architecture" width="640" height="400" loading="lazy" />
                     </div>
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">Closed-chain · Kinematics</span>
-                    <h3>Parallel Five-Bar Leg <br>Architecture</h3>
+                    <h3>Parallel Five-Bar Leg Architecture</h3>
                     <p class="project-brief">
-                        Analytical research into a closed-chain five-bar mechanism designed to reproduce serial-leg-like 
-                        foot trajectories for improved stability and rigidity.
+                        Analytical research into a closed-chain five-bar mechanism designed to reproduce serial-leg-like foot trajectories for improved stability and rigidity.
                     </p>
                     <div class="project-stats">
                         <span><strong>Closed-Chain</strong> Stability</span>
                         <span><strong>Serial-like</strong> Trajectories</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
                 </div>
-            </div>
+            </article>
 
             <!-- Project 5: TPU -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
-                        <img src="images/project-tpu.jpg" alt="TPU Material Characterization">
+                        <img src="images/project-tpu.jpg" alt="TPU Material Characterization" width="640" height="400" loading="lazy" />
                     </div>
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
                     <span class="project-category">Materials · FEA</span>
-                    <h3>TPU Hyperelastic Material <br>Characterization</h3>
+                    <h3>TPU Hyperelastic Material Characterization</h3>
                     <p class="project-brief">
-                        Experimental characterization of 60A and 70A TPU using tensile testing. Fitted to the Yeoh 3rd Order 
-                        hyperelastic model for improved FEA simulation accuracy.
+                        Experimental characterization of 60A and 70A TPU using tensile testing. Fitted to the Yeoh 3rd Order hyperelastic model for improved FEA simulation accuracy.
                     </p>
                     <div class="project-stats">
                         <span><strong>60A</strong> E=4.43 N/mm²</span>
                         <span><strong>70A</strong> E=6.62 N/mm²</span>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- RESEARCH AREAS                                               -->
+    <!-- RESEARCH AREAS                                                -->
     <!-- ============================================================ -->
-    <section id="areas">
+    <section id="areas" aria-labelledby="areas-title">
         <div class="container">
             <div class="section-header center reveal">
-                <h2 class="section-title">Research Areas</h2>
+                <h2 id="areas-title" class="section-title">Research Areas</h2>
                 <div class="gold-line center"></div>
             </div>
             <div class="areas-grid">
@@ -225,92 +223,89 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- EXPERIENCE                                                   -->
+    <!-- EXPERIENCE                                                    -->
     <!-- ============================================================ -->
-    <section id="experience">
+    <section id="experience" aria-labelledby="experience-title">
         <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title">Experience</h2>
+            <div class="section-header center reveal">
+                <h2 id="experience-title" class="section-title">Experience</h2>
                 <div class="gold-line center"></div>
+                <p class="section-subtitle" style="margin:0 auto;">Organizations I've collaborated with</p>
             </div>
 
             <div class="experience-grid">
-                <!-- EXPERIENCE CARD 1 -->
-                <div class="exp-card reveal">
+
+                <article class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/kuas.png" alt="Kyoto University of Advanced Science logo">
+                        <img src="images/kuas.png" alt="Kyoto University of Advanced Science logo" width="200" height="112" loading="lazy" />
                     </div>
                     <div class="exp-hover-details">
                         <h4>Teaching Assistant &amp; S4S Mentor</h4>
                         <p>2022 – Present · Facilitated learning across 10+ courses including Mathematics, Robotics, Laboratory classes, and Machine Workshop Practice.</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- EXPERIENCE CARD 2 -->
-                <div class="exp-card reveal">
+                <article class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                       <img src="images/nisar_lab.png" alt="NISAR Lab logo">
+                        <img src="images/nisar_lab.png" alt="NISAR Lab logo" width="200" height="112" loading="lazy" />
                     </div>
                     <div class="exp-hover-details">
                         <h4>Researcher</h4>
-                        <p>2023 - Present · Robotics research in Grasping theory, Robotic Manipulators, and Control Systems.</p>
+                        <p>2023 – Present · Robotics research in Grasping theory, Robotic Manipulators, and Control Systems.</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- EXPERIENCE CARD 3 -->
-                <div class="exp-card reveal">
+                <article class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/TwelveLogo_ttlUnder.png" alt="Twelve logo">
+                        <img src="images/TwelveLogo_ttlUnder.png" alt="Twelve logo" width="200" height="112" loading="lazy" />
                     </div>
                     <div class="exp-hover-details">
                         <h4>SATORI Product Tester</h4>
                         <p>2023 · Tested and evaluated educational mathematics material for school and examination preparation.</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- EXPERIENCE CARD 4 -->
-                <div class="exp-card reveal">
+                <article class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/kmc_2.png" alt="KMC logo">
+                        <img src="images/kmc_2.png" alt="KMC logo" width="200" height="112" loading="lazy" />
                     </div>
                     <div class="exp-hover-details">
                         <h4>Assistant Gym Staff</h4>
-                        <p>2023 - Present · Client training, data entry and analysis, and machine maintenance.</p>
+                        <p>2023 – Present · Client training, data entry and analysis, and machine maintenance.</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- EXPERIENCE CARD 5 -->
-                <div class="exp-card reveal">
+                <article class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/matsui.png" alt="Matsui logo">
+                        <img src="images/matsui.png" alt="Matsui logo" width="200" height="112" loading="lazy" />
                     </div>
                     <div class="exp-hover-details">
                         <h4>Capstone Project</h4>
-                        <p>2022 - 2023 · Researched improving water resistance of jigs using Onyx (Nylon + Carbon Fiber 3D printing material).</p>
+                        <p>2022 – 2023 · Researched improving water resistance of jigs using Onyx (Nylon + Carbon Fiber 3D printing material).</p>
                     </div>
-                </div>
+                </article>
 
-                <!-- EXPERIENCE CARD 6 -->
-                <div class="exp-card reveal">
+                <article class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/morita.png" alt="Morita logo">
+                        <img src="images/morita.png" alt="Morita logo" width="200" height="112" loading="lazy" />
                     </div>
                     <div class="exp-hover-details">
                         <h4>Summer Intern</h4>
                         <p>2026 · Created service and repair videos for dental equipment field technicians.</p>
                     </div>
-                </div>
+                </article>
+
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- PUBLICATIONS                                                 -->
+    <!-- PUBLICATIONS                                                  -->
     <!-- ============================================================ -->
-    <section id="publications">
+    <section id="publications" aria-labelledby="publications-title">
         <div class="container">
             <div class="section-header reveal">
-                <h2 class="section-title">Publications</h2>
+                <h2 id="publications-title" class="section-title">Publications</h2>
                 <div class="gold-line"></div>
             </div>
             <div class="pub-list">
@@ -335,41 +330,39 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- ABOUT                                                        -->
+    <!-- ABOUT                                                         -->
     <!-- ============================================================ -->
-    <section id="about">
+    <section id="about" aria-labelledby="about-title">
         <div class="container about-container">
             <div class="about-text reveal">
-                <h2>About Me</h2>
+                <h2 id="about-title">About Me</h2>
                 <div class="gold-line left"></div>
                 <p>
-                    I am a robotics researcher and engineer interested in the design, modeling, and experimental validation of robotic systems. 
-                    My work spans robotic mechanisms, wearable sensing, teleoperation, soft robotics, and mathematical modeling.
+                    I am a robotics researcher and engineer interested in the design, modeling, and experimental validation of robotic systems. My work spans robotic mechanisms, wearable sensing, teleoperation, soft robotics, and mathematical modeling.
                 </p>
                 <p>
-                    My approach combines mechanical design and kinematic analysis with simulation, embedded systems, control systems, and physical prototyping. 
-                    Across my research projects, I focus on turning mathematical concepts into experimentally validated robotic systems.
+                    My approach combines mechanical design and kinematic analysis with simulation, embedded systems, control systems, and physical prototyping. Across my research projects, I focus on turning mathematical concepts into experimentally validated robotic systems.
                 </p>
                 <div class="about-equation">
-                    MECHANICAL DESIGN + MATHEMATICAL MODELING + CONTROL + PHYSICAL PROTOTYPING = ROBOTIC SYSTEMS
+                    Mechanical Design + Mathematical Modeling + Control + Physical Prototyping = Robotic Systems
                 </div>
                 <a href="#" class="btn btn-primary">Download Full CV</a>
             </div>
             <div class="about-image reveal">
                 <div class="image-placeholder-square">
-                    <img src="images/profile-robot.jpg" alt="Gajitha Nanayakkara in the lab">
+                    <img src="images/profile-robot.jpg" alt="Gajitha Nanayakkara in the lab" width="400" height="400" loading="lazy" />
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- CONTACT                                                      -->
+    <!-- CONTACT                                                       -->
     <!-- ============================================================ -->
-    <section id="contact">
+    <section id="contact" aria-labelledby="contact-title">
         <div class="container contact-content">
             <div class="reveal">
-                <h2 class="section-title">Get In Touch</h2>
+                <h2 id="contact-title" class="section-title">Get In Touch</h2>
                 <div class="gold-line center"></div>
                 <p>Interested in collaboration, research opportunities, or just want to chat about robotics? Reach out.</p>
             </div>
@@ -388,12 +381,12 @@
 
     <footer>
         <div class="container">
-            <p>© 2026 Gajitha Nanayakkara. Crafted with precision.</p>
+            <p>&copy; 2026 Gajitha Nanayakkara. Crafted with precision.</p>
         </div>
     </footer>
 
     <!-- ============================================================ -->
-    <!-- BACK TO TOP BUTTON                                           -->
+    <!-- BACK TO TOP                                                   -->
     <!-- ============================================================ -->
     <button id="backToTop" aria-label="Back to top">↑</button>
 
