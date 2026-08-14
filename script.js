@@ -134,16 +134,6 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((el) => revealObserver.observe(el));
 
 // ================================================================
-// CONSOLE WELCOME
-// ================================================================
-console.log('╔════════════════════════════════════════╗');
-console.log('║   GAJITHA NANAYAKKARA                 ║');
-console.log('║   Robotics Engineer & Researcher      ║');
-console.log('║   Surgical Robotics · HRI · Design    ║');
-console.log('║   Built with ❤️ & GitHub Pages        ║');
-console.log('╚════════════════════════════════════════╝');
-
-// ================================================================
 // KEYBOARD NAVIGATION FOR HAMBURGER (Accessibility)
 // ================================================================
 if (hamburger) {
@@ -154,3 +144,13 @@ if (hamburger) {
         }
     });
 }
+
+// ================================================================
+// CONSOLE WELCOME
+// ================================================================
+console.log('╔════════════════════════════════════════╗');
+console.log('║   GAJITHA NANAYAKKARA                 ║');
+console.log('║   Robotics Engineer · Researcher      ║');
+console.log('║   Educator · Chess Player             ║');
+console.log('║   Built with ❤️ & GitHub Pages        ║');
+console.log('╚════════════════════════════════════════╝');
