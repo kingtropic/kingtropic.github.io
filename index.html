@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gajitha Nanayakkara · Robotics Engineer & Researcher specializing in mechanism design, human-robot interaction, and robotic manipulation.">
     <title>Gajitha Nanayakkara · Robotics Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts: Sora for elegant headings, Inter for clean body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,33 +13,41 @@
 <body>
 
     <!-- ============================================================ -->
+    <!-- LOADING ANIMATION                                             -->
+    <!-- ============================================================ -->
+    <div id="loader">
+        <div class="loader-ring"></div>
+    </div>
+
+    <!-- ============================================================ -->
     <!-- NAVIGATION                                                   -->
     <!-- ============================================================ -->
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
             <div class="logo">Gajitha Nanayakkara</div>
             <ul class="nav-links">
-                <li><a href="#research">Research</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="#cv" class="nav-cv">CV</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
                 <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
     <!-- ============================================================ -->
-    <!-- HERO SECTION - Clean & Professional                         -->
+    <!-- HERO SECTION                                                 -->
     <!-- ============================================================ -->
     <header id="hero">
         <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <div class="cyan-badge">ROBOTICS &amp; MECHATRONICS</div>
+                <div class="gold-badge">ROBOTICS &amp; MECHATRONICS</div>
                 <h1>Robotics Engineer <br><span class="highlight"> Researcher</span> <br><span class="highlight">&amp; Tutor</span></h1>
                 <p class="tagline">
                     Designing intelligent mechanisms, wearable interfaces, and experimental systems at the intersection of mechanical design, control, and human–robot interaction.
@@ -57,33 +65,34 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Replace with your actual hero image -->
                 <div class="image-placeholder-large">
                     <img src="images/hero-robot-composite.jpg" alt="Robotic systems composite">
                 </div>
-                <!-- <video src="videos/hero-robot-demo.mp4" autoplay loop muted playsinline></video> -->
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
         </div>
     </header>
 
     <!-- ============================================================ -->
-    <!-- SELECTED RESEARCH (FEATURED PROJECTS)                        -->
+    <!-- SELECTED RESEARCH                                             -->
     <!-- ============================================================ -->
     <section id="research">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2 class="section-title">Selected Research</h2>
-                <div class="cyan-line"></div>
+                <div class="gold-line"></div>
                 <p class="section-subtitle">Featured projects from my recent work in robotic systems and experimental validation.</p>
             </div>
 
             <!-- Project 1: IMU Glove -->
-            <div class="project-card">
+            <div class="project-card reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
                         <img src="images/project-imu-glove.jpg" alt="IMU Glove and Robotic Finger">
                     </div>
-                    <!-- <video src="videos/imu-glove-demo.mp4" autoplay loop muted playsinline></video> -->
                     <div class="project-year">2025</div>
                 </div>
                 <div class="project-info">
@@ -102,7 +111,7 @@
             </div>
 
             <!-- Project 2: Surgical RCM -->
-            <div class="project-card reverse">
+            <div class="project-card reverse reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
                         <img src="images/project-surgical-robot.jpg" alt="Surgical RCM Manipulator">
@@ -125,7 +134,7 @@
             </div>
 
             <!-- Project 3: Mode-Switching -->
-            <div class="project-card">
+            <div class="project-card reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
                         <img src="images/project-mode-switching.jpg" alt="Mode-Switching Linear-Rotary Mechanism">
@@ -148,7 +157,7 @@
             </div>
 
             <!-- Project 4: Five-Bar Leg -->
-            <div class="project-card reverse">
+            <div class="project-card reverse reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
                         <img src="images/project-five-bar-leg.jpg" alt="Five-Bar Bipedal Leg Architecture">
@@ -171,7 +180,7 @@
             </div>
 
             <!-- Project 5: TPU -->
-            <div class="project-card">
+            <div class="project-card reveal">
                 <div class="project-visual">
                     <div class="image-placeholder">
                         <img src="images/project-tpu.jpg" alt="TPU Material Characterization">
@@ -200,99 +209,98 @@
     <!-- ============================================================ -->
     <section id="areas">
         <div class="container">
-            <div class="section-header center">
+            <div class="section-header center reveal">
                 <h2 class="section-title">Research Areas</h2>
-                <div class="cyan-line"></div>
+                <div class="gold-line center"></div>
             </div>
             <div class="areas-grid">
-                <div class="area-card">Robotic Mechanisms</div>
-                <div class="area-card">Robotic Manipulation</div>
-                <div class="area-card">Human–Robot Interaction</div>
-                <div class="area-card">Soft &amp; Compliant Robotics</div>
-                <div class="area-card">Control &amp; Software</div>
-                <div class="area-card">Space Robotics</div>
+                <div class="area-card reveal">Robotic Mechanisms</div>
+                <div class="area-card reveal">Robotic Manipulation</div>
+                <div class="area-card reveal">Human–Robot Interaction</div>
+                <div class="area-card reveal">Soft &amp; Compliant Robotics</div>
+                <div class="area-card reveal">Control &amp; Software</div>
+                <div class="area-card reveal">Space Robotics</div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- EXPERIENCE - Logo Grid with Hover Details                    -->
+    <!-- EXPERIENCE                                                   -->
     <!-- ============================================================ -->
     <section id="experience">
         <div class="container">
-            <div class="section-header center">
+            <div class="section-header center reveal">
                 <h2 class="section-title">Experience</h2>
-                <div class="cyan-line center"></div>
+                <div class="gold-line center"></div>
+                <p class="section-subtitle" style="margin: 0 auto;">Organizations I've collaborated with</p>
             </div>
 
             <div class="experience-grid">
-
                 <!-- EXPERIENCE CARD 1 -->
-                <div class="exp-card">
+                <div class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/kuas.png" alt="kuas_logo">
+                        <img src="images/kuas.png" alt="Kyoto University of Advanced Science logo">
                     </div>
                     <div class="exp-hover-details">
-                        <h4>Teaching Assistant and S4S Mentor</h4>
-                        <p>2022 – Present · Facilitated learning and provided instructional support across a diverse curriculum of over 10 courses, including Mathematics, Robotics, Laboratory classes, and Machine Workshop Practice.</p>
+                        <h4>Teaching Assistant &amp; S4S Mentor</h4>
+                        <p>2022 – Present · Facilitated learning across 10+ courses including Mathematics, Robotics, Laboratory classes, and Machine Workshop Practice.</p>
                     </div>
                 </div>
 
                 <!-- EXPERIENCE CARD 2 -->
-                <div class="exp-card">
+                <div class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                       <img src="images/nisar_lab.png" alt="nisar_lab">
+                       <img src="images/nisar_lab.png" alt="NISAR Lab logo">
                     </div>
                     <div class="exp-hover-details">
                         <h4>Researcher</h4>
-                        <p>2023 - Present · Robotics Researcher working on several topics and field, including Grasping theory, Robotic Manipulators, and Control Systems</p>
+                        <p>2023 - Present · Robotics research in Grasping theory, Robotic Manipulators, and Control Systems.</p>
                     </div>
                 </div>
 
                 <!-- EXPERIENCE CARD 3 -->
-                <div class="exp-card">
+                <div class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/TwelveLogo_ttlUnder.png" alt="tamai">
+                        <img src="images/TwelveLogo_ttlUnder.png" alt="Twelve logo">
                     </div>
                     <div class="exp-hover-details">
                         <h4>SATORI Product Tester</h4>
-                        <p>2023 · Tested and evaluated educational material for students taking mathematics as a subject in school and for examinations pertaining to mathematics.</p>
+                        <p>2023 · Tested and evaluated educational mathematics material for school and examination preparation.</p>
                     </div>
                 </div>
 
                 <!-- EXPERIENCE CARD 4 -->
-                <div class="exp-card">
+                <div class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/kmc_2.png" alt="kmc">
+                        <img src="images/kmc_2.png" alt="KMC logo">
                     </div>
                     <div class="exp-hover-details">
                         <h4>Assistant Gym Staff</h4>
-                        <p>2023 - Present · Involved in daily operational tasks, including client training, data entry and analysis and machine maintenance.</p>
+                        <p>2023 - Present · Client training, data entry and analysis, and machine maintenance.</p>
                     </div>
                 </div>
 
                 <!-- EXPERIENCE CARD 5 -->
-                <div class="exp-card">
+                <div class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/matsui.png" alt="matsui">
+                        <img src="images/matsui.png" alt="Matsui logo">
                     </div>
                     <div class="exp-hover-details">
                         <h4>Capstone Project</h4>
-                        <p>2022 - 2023 · The Project involved extensive experimentation and research into improving the water resistance of jigs manufactured by the Company by using Onyx, a 3D printing material comprised of Nylon and Carbon Fiber. The goal was to provide recommendations on improving the jigs used to produce products at the Company.</p>
+                        <p>2022 - 2023 · Researched improving water resistance of jigs using Onyx (Nylon + Carbon Fiber 3D printing material).</p>
                     </div>
                 </div>
 
                 <!-- EXPERIENCE CARD 6 -->
-                <div class="exp-card">
+                <div class="exp-card reveal">
                     <div class="exp-logo-wrapper">
-                        <img src="images/morita.png" alt="matsui">
+                        <img src="images/morita.png" alt="Morita logo">
                     </div>
                     <div class="exp-hover-details">
                         <h4>Summer Intern</h4>
-                        <p>2026 · Assisted in the creation of service and repair material such as videos and understand how to film for improved understandability of field technicians for dental equipment.</p>
+                        <p>2026 · Created service and repair videos for dental equipment field technicians.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -302,24 +310,24 @@
     <!-- ============================================================ -->
     <section id="publications">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2 class="section-title">Publications</h2>
-                <div class="cyan-line"></div>
+                <div class="gold-line"></div>
             </div>
             <div class="pub-list">
-                <div class="pub-item">
+                <div class="pub-item reveal">
                     <span class="pub-year">2026</span>
                     <p>Closed-Form Identification Framework of Captured Payload Inertia for a Free-Floating Space Manipulator <span class="pub-status">[Under Review]</span></p>
                 </div>
-                <div class="pub-item">
+                <div class="pub-item reveal">
                     <span class="pub-year">2025</span>
                     <p>Minimalist IMU-Based Glove for Real-Time Finger Tracking for Robot Teleoperation <span class="pub-conf">AROB 2025</span></p>
                 </div>
-                <div class="pub-item">
+                <div class="pub-item reveal">
                     <span class="pub-year">2025</span>
                     <p>Design and Realization of a Surgical Manipulator with Remote Center of Motion <span class="pub-conf">ICRA 2025 (Submitted)</span></p>
                 </div>
-                <div class="pub-item">
+                <div class="pub-item reveal">
                     <span class="pub-year">2024</span>
                     <p>Determining the Minimal Number of Contact Points for Stable Grasping <span class="pub-conf">RSJ 2024</span></p>
                 </div>
@@ -328,13 +336,13 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- ABOUT & CONTACT                                              -->
+    <!-- ABOUT                                                        -->
     <!-- ============================================================ -->
     <section id="about">
         <div class="container about-container">
-            <div class="about-text">
+            <div class="about-text reveal">
                 <h2>About Me</h2>
-                <div class="cyan-line left"></div>
+                <div class="gold-line left"></div>
                 <p>
                     I am a robotics researcher and engineer interested in the design, modeling, and experimental validation of robotic systems. 
                     My work spans robotic mechanisms, wearable sensing, teleoperation, soft robotics, and mathematical modeling.
@@ -348,31 +356,33 @@
                 </div>
                 <a href="#" class="btn btn-primary">Download Full CV</a>
             </div>
-            <div class="about-image">
+            <div class="about-image reveal">
                 <div class="image-placeholder-square">
-                    <img src="images/profile-robot.jpg" alt="Gajitha in the lab">
+                    <img src="images/profile-robot.jpg" alt="Gajitha Nanayakkara in the lab">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- CONTACT & FOOTER                                             -->
+    <!-- CONTACT                                                      -->
     <!-- ============================================================ -->
     <section id="contact">
         <div class="container contact-content">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="cyan-line center"></div>
-            <p>Interested in collaboration, research opportunities, or just want to chat about robotics? Reach out.</p>
-            <div class="contact-info">
+            <div class="reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="gold-line center"></div>
+                <p>Interested in collaboration, research opportunities, or just want to chat about robotics? Reach out.</p>
+            </div>
+            <div class="contact-info reveal">
                 <span>📧 gajitha17@gmail.com</span>
                 <span>📧 2025mm24@kuas.ac.jp</span>
                 <span>📍 NISAR Lab · Kyoto University of Advanced Science</span>
             </div>
-            <div class="social-links">
-                <a href="#" class="social-btn">GitHub</a>
-                <a href="#" class="social-btn">LinkedIn</a>
-                <a href="#" class="social-btn">Google Scholar</a>
+            <div class="social-links reveal">
+                <a href="#" class="social-btn" aria-label="GitHub">GitHub</a>
+                <a href="#" class="social-btn" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" class="social-btn" aria-label="Google Scholar">Google Scholar</a>
             </div>
         </div>
     </section>
@@ -382,6 +392,11 @@
             <p>© 2026 Gajitha Nanayakkara. Crafted with precision.</p>
         </div>
     </footer>
+
+    <!-- ============================================================ -->
+    <!-- BACK TO TOP BUTTON                                           -->
+    <!-- ============================================================ -->
+    <button id="backToTop" aria-label="Back to top">↑</button>
 
     <script src="script.js"></script>
 </body>
