@@ -1142,3 +1142,13 @@ footer {
         padding: 8px;
     }
 }
+#hero {
+    background: #0f172a;  /* Deep navy hero */
+    border-bottom: 1px solid #1e293b;
+}
+#hero .tagline {
+    color: #cbd5e1;  /* Lighter text on the dark hero */
+}
+#hero .hero-keywords {
+    color: #60a5fa;  /* Lighter blue keywords */
+}
