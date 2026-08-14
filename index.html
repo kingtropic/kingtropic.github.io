@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gajitha Nanayakkara · Robotics Engineer & Researcher specializing in mechanism design, human-robot interaction, and robotic manipulation." />
+    <meta name="description" content="Gajitha Nanayakkara · Robotics Engineer specializing in Surgical Robotics, HRI, and Mechanism Design. Researcher and tutor at Kyoto University of Advanced Science." />
     <title>Gajitha Nanayakkara · Robotics Engineer</title>
 
     <!-- Preconnect for faster font loading -->
@@ -23,7 +23,7 @@
     </div>
 
     <!-- ============================================================ -->
-    <!-- NAVIGATION                                                    -->
+    <!-- TOP NAVIGATION                                                -->
     <!-- ============================================================ -->
     <nav role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
@@ -51,9 +51,13 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <div class="gold-badge">Robotics &amp; Mechatronics</div>
-                <h1>Robotics Engineer <br /><span class="highlight">Researcher</span> <br /><span class="highlight">&amp; Tutor</span></h1>
+                <h1>
+                    Robotics Engineer <br />
+                    <span class="highlight">Surgical Robotics</span><br />
+                    <span class="highlight">&amp; HRI</span>
+                </h1>
                 <p class="tagline">
-                    Designing intelligent mechanisms, wearable interfaces, and experimental systems at the intersection of mechanical design, control, and human–robot interaction.
+                    Designing intelligent mechanisms that bridge mathematical modeling and physical experimentation — from surgical manipulators to wearable interfaces.
                 </p>
                 <div class="hero-keywords">
                     <span>Mechanism Design</span>
@@ -61,6 +65,8 @@
                     <span>Robotics</span>
                     <span class="dot">·</span>
                     <span>HRI</span>
+                    <span class="dot">·</span>
+                    <span>Control Systems</span>
                 </div>
                 <div class="hero-buttons">
                     <a href="#research" class="btn btn-primary">Explore Research</a>
@@ -80,14 +86,34 @@
     </header>
 
     <!-- ============================================================ -->
-    <!-- RESEARCH                                                      -->
+    <!-- RESEARCH AREAS                                                -->
+    <!-- ============================================================ -->
+    <section id="areas" aria-labelledby="areas-title">
+        <div class="container">
+            <div class="section-header center reveal">
+                <h2 id="areas-title" class="section-title">Research Areas</h2>
+                <div class="gold-line center"></div>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card reveal">Robotic Mechanisms</div>
+                <div class="area-card reveal">Robotic Manipulation</div>
+                <div class="area-card reveal">Human–Robot Interaction</div>
+                <div class="area-card reveal">Soft &amp; Compliant Robotics</div>
+                <div class="area-card reveal">Control &amp; Software</div>
+                <div class="area-card reveal">Space Robotics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SELECTED RESEARCH (FEATURED PROJECTS)                        -->
     <!-- ============================================================ -->
     <section id="research" aria-labelledby="research-title">
         <div class="container">
             <div class="section-header reveal">
-                <h2 id="research-title" class="section-title">Selected Research</h2>
+                <h2 id="research-title" class="section-title">Featured Research</h2>
                 <div class="gold-line"></div>
-                <p class="section-subtitle">Featured projects from my recent work in robotic systems and experimental validation.</p>
+                <p class="section-subtitle">Selected projects demonstrating my approach to solving complex robotics challenges.</p>
             </div>
 
             <!-- Project 1: IMU Glove -->
@@ -107,8 +133,9 @@
                     <div class="project-stats">
                         <span><strong>4 DoF</strong> Robot Finger</span>
                         <span><strong>10–15%</strong> Posture Discrepancy</span>
+                        <span><strong>2 IMUs</strong> Sensing System</span>
                     </div>
-                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
+                    <a href="#" class="project-link">View the IMU Glove Case Study <span aria-hidden="true">→</span></a>
                 </div>
             </article>
 
@@ -129,8 +156,9 @@
                     <div class="project-stats">
                         <span><strong>±35°</strong> Pitch / Yaw</span>
                         <span><strong>80 mm</strong> Translation</span>
+                        <span><strong>50%</strong> Footprint Reduction</span>
                     </div>
-                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
+                    <a href="#" class="project-link">View the Surgical Manipulator Case Study <span aria-hidden="true">→</span></a>
                 </div>
             </article>
 
@@ -151,8 +179,9 @@
                     <div class="project-stats">
                         <span><strong>0.344 s</strong> Switching</span>
                         <span><strong>13.33 mm/s</strong> Linear Velocity</span>
+                        <span><strong>11.25 s</strong> Full Extension</span>
                     </div>
-                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
+                    <a href="#" class="project-link">View the Mode-Switching Case Study <span aria-hidden="true">→</span></a>
                 </div>
             </article>
 
@@ -173,8 +202,9 @@
                     <div class="project-stats">
                         <span><strong>Closed-Chain</strong> Stability</span>
                         <span><strong>Serial-like</strong> Trajectories</span>
+                        <span><strong>Analytical</strong> Validation</span>
                     </div>
-                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
+                    <a href="#" class="project-link">View the Five-Bar Leg Case Study <span aria-hidden="true">→</span></a>
                 </div>
             </article>
 
@@ -195,30 +225,11 @@
                     <div class="project-stats">
                         <span><strong>60A</strong> E=4.43 N/mm²</span>
                         <span><strong>70A</strong> E=6.62 N/mm²</span>
+                        <span><strong>Yeoh 3rd</strong> Order Fit</span>
                     </div>
-                    <a href="#" class="project-link">View Project <span aria-hidden="true">→</span></a>
+                    <a href="#" class="project-link">View the TPU Characterization Case Study <span aria-hidden="true">→</span></a>
                 </div>
             </article>
-        </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- RESEARCH AREAS                                                -->
-    <!-- ============================================================ -->
-    <section id="areas" aria-labelledby="areas-title">
-        <div class="container">
-            <div class="section-header center reveal">
-                <h2 id="areas-title" class="section-title">Research Areas</h2>
-                <div class="gold-line center"></div>
-            </div>
-            <div class="areas-grid">
-                <div class="area-card reveal">Robotic Mechanisms</div>
-                <div class="area-card reveal">Robotic Manipulation</div>
-                <div class="area-card reveal">Human–Robot Interaction</div>
-                <div class="area-card reveal">Soft &amp; Compliant Robotics</div>
-                <div class="area-card reveal">Control &amp; Software</div>
-                <div class="area-card reveal">Space Robotics</div>
-            </div>
         </div>
     </section>
 
@@ -307,6 +318,7 @@
             <div class="section-header reveal">
                 <h2 id="publications-title" class="section-title">Publications</h2>
                 <div class="gold-line"></div>
+                <p class="section-subtitle">Research papers and conference proceedings</p>
             </div>
             <div class="pub-list">
                 <div class="pub-item reveal">
@@ -346,6 +358,24 @@
                 <div class="about-equation">
                     Mechanical Design + Mathematical Modeling + Control + Physical Prototyping = Robotic Systems
                 </div>
+
+                <!-- Skills Section -->
+                <div class="skills-section">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">ROS2</span>
+                        <span class="skill-tag">CAD (SolidWorks)</span>
+                        <span class="skill-tag">Kinematics</span>
+                        <span class="skill-tag">Control Systems</span>
+                        <span class="skill-tag">FEA</span>
+                        <span class="skill-tag">3D Printing</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">DYNAMIXEL</span>
+                    </div>
+                </div>
+
                 <a href="#" class="btn btn-primary">Download Full CV</a>
             </div>
             <div class="about-image reveal">
@@ -362,14 +392,14 @@
     <section id="contact" aria-labelledby="contact-title">
         <div class="container contact-content">
             <div class="reveal">
-                <h2 id="contact-title" class="section-title">Get In Touch</h2>
+                <h2 id="contact-title" class="section-title">Let's Connect</h2>
                 <div class="gold-line center"></div>
                 <p>Interested in collaboration, research opportunities, or just want to chat about robotics? Reach out.</p>
             </div>
             <div class="contact-info reveal">
-                <span>📧 gajitha17@gmail.com</span>
-                <span>📧 2025mm24@kuas.ac.jp</span>
-                <span>📍 NISAR Lab · Kyoto University of Advanced Science</span>
+                <a href="mailto:gajitha17@gmail.com" class="contact-link">📧 gajitha17@gmail.com</a>
+                <a href="mailto:2025mm24@kuas.ac.jp" class="contact-link">📧 2025mm24@kuas.ac.jp</a>
+                <span class="contact-location">📍 NISAR Lab · Kyoto University of Advanced Science</span>
             </div>
             <div class="social-links reveal">
                 <a href="#" class="social-btn" aria-label="GitHub">GitHub</a>
@@ -389,6 +419,38 @@
     <!-- BACK TO TOP                                                   -->
     <!-- ============================================================ -->
     <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- ============================================================ -->
+    <!-- BOTTOM NAVIGATION (Mobile/Tablet)                            -->
+    <!-- ============================================================ -->
+    <nav class="bottom-nav" role="navigation" aria-label="Quick navigation">
+        <div class="bottom-nav-container">
+            <a href="#hero" class="bottom-nav-link active" data-section="hero">
+                <span class="bottom-nav-icon">🏠</span>
+                <span class="bottom-nav-label">Home</span>
+            </a>
+            <a href="#research" class="bottom-nav-link" data-section="research">
+                <span class="bottom-nav-icon">🔬</span>
+                <span class="bottom-nav-label">Research</span>
+            </a>
+            <a href="#experience" class="bottom-nav-link" data-section="experience">
+                <span class="bottom-nav-icon">💼</span>
+                <span class="bottom-nav-label">Experience</span>
+            </a>
+            <a href="#publications" class="bottom-nav-link" data-section="publications">
+                <span class="bottom-nav-icon">📄</span>
+                <span class="bottom-nav-label">Pubs</span>
+            </a>
+            <a href="#about" class="bottom-nav-link" data-section="about">
+                <span class="bottom-nav-icon">👤</span>
+                <span class="bottom-nav-label">About</span>
+            </a>
+            <a href="#contact" class="bottom-nav-link" data-section="contact">
+                <span class="bottom-nav-icon">✉️</span>
+                <span class="bottom-nav-label">Contact</span>
+            </a>
+        </div>
+    </nav>
 
     <script src="script.js"></script>
 </body>
