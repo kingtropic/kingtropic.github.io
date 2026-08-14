@@ -2,33 +2,27 @@
    ROOT VARIABLES — Black & Gold
    ================================================================ */
 :root {
-    /* Backgrounds */
     --bg-primary: #0a0a0a;
     --bg-secondary: #111111;
     --bg-card: #181818;
     --bg-card-hover: #222222;
 
-    /* Text */
     --text-primary: #f5f5f5;
     --text-secondary: #b0b0b0;
     --text-muted: #6b6b6b;
 
-    /* Gold Accent */
     --gold: #d4af37;
     --gold-light: #e8c84a;
     --gold-dark: #a8872a;
     --gold-glow: rgba(212, 175, 55, 0.12);
     --gold-glow-strong: rgba(212, 175, 55, 0.25);
 
-    /* Borders */
     --border-color: #2a2518;
     --border-light: #333333;
 
-    /* Typography */
     --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    /* Transitions */
     --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
     --transition-fast: 0.2s var(--ease-out);
@@ -505,6 +499,33 @@ nav:not(.bottom-nav).scrolled {
     color: var(--text-muted);
 }
 
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stat .stat-number {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1.2;
+}
+
+.hero-stat .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -576,7 +597,6 @@ nav:not(.bottom-nav).scrolled {
     object-fit: cover;
 }
 
-/* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
     bottom: 28px;
@@ -613,31 +633,43 @@ nav:not(.bottom-nav).scrolled {
 }
 
 /* ================================================================
-   RESEARCH AREAS
+   RESEARCH SECTION
    ================================================================ */
-#areas {
-    padding: 72px 0;
-    background: var(--bg-primary);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+#research {
+    padding: 80px 0;
+    background: var(--bg-secondary);
+}
+
+.research-areas {
+    margin-bottom: 48px;
+}
+
+.research-areas h3,
+.featured-projects h3,
+.publications-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
 }
 
 .areas-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 16px;
 }
 
 .area-card {
     background: var(--bg-card);
-    padding: 22px;
+    padding: 18px;
     text-align: center;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     font-weight: 500;
     color: var(--text-secondary);
     transition: all var(--transition-fast);
-    font-size: 1rem;
+    font-size: 0.95rem;
     letter-spacing: 0.3px;
     cursor: default;
 }
@@ -650,12 +682,8 @@ nav:not(.bottom-nav).scrolled {
     background: var(--bg-card-hover);
 }
 
-/* ================================================================
-   PROJECT CARDS
-   ================================================================ */
-#research {
-    padding: 80px 0;
-    background: var(--bg-secondary);
+.featured-projects {
+    margin-bottom: 48px;
 }
 
 .project-card {
@@ -665,7 +693,7 @@ nav:not(.bottom-nav).scrolled {
     background: var(--bg-card);
     border-radius: 20px;
     padding: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     border: 1px solid var(--border-color);
     transition: all var(--transition-med);
 }
@@ -798,124 +826,18 @@ nav:not(.bottom-nav).scrolled {
     color: var(--gold-light);
 }
 
-/* ================================================================
-   EXPERIENCE
-   ================================================================ */
-#experience {
-    padding: 72px 0;
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 20px;
-    margin-top: 8px;
-}
-
-.exp-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 20px 16px 18px;
-    text-align: center;
-    transition: all var(--transition-med);
-    cursor: default;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform-origin: center center;
-}
-
-.exp-card:hover {
-    transform: translateY(-12px) scale(1.04);
-    border-color: var(--gold);
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 48px var(--gold-glow);
-    background: var(--bg-card-hover);
-    z-index: 10;
-}
-
-.exp-logo-wrapper {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: var(--bg-primary);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border-light);
-    overflow: hidden;
-    transition: all var(--transition-fast);
-}
-
-.exp-card:hover .exp-logo-wrapper {
-    border-color: var(--gold);
-    box-shadow: 0 0 24px var(--gold-glow);
-}
-
-.exp-logo-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 14px;
-    background: #ffffff;
-    transition: all var(--transition-med);
-}
-
-.exp-card:hover .exp-logo-wrapper img {
-    transform: scale(1.15);
-    padding: 6px;
-}
-
-.exp-hover-details {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.5s var(--ease-out);
-    width: 100%;
-    margin-top: 0;
-}
-
-.exp-card:hover .exp-hover-details {
-    max-height: 300px;
-    opacity: 1;
-    margin-top: 14px;
-}
-
-.exp-hover-details h4 {
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--gold);
-    margin-bottom: 3px;
-    letter-spacing: -0.2px;
-}
-
-.exp-hover-details p {
-    color: var(--text-secondary);
-    font-size: 0.82rem;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-/* ================================================================
-   PUBLICATIONS
-   ================================================================ */
-#publications {
-    padding: 72px 0;
-    background: var(--bg-primary);
+.publications-section h3 {
+    margin-bottom: 16px;
 }
 
 .pub-list {
-    max-width: 780px;
+    max-width: 100%;
 }
 
 .pub-item {
     display: flex;
     gap: 28px;
-    padding: 16px 0;
+    padding: 14px 0;
     border-bottom: 1px solid var(--border-color);
     align-items: baseline;
     transition: all var(--transition-fast);
@@ -963,6 +885,431 @@ nav:not(.bottom-nav).scrolled {
 }
 
 /* ================================================================
+   TEACHING SECTION
+   ================================================================ */
+#teaching {
+    padding: 80px 0;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.teaching-philosophy {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 32px 36px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 48px;
+}
+
+.teaching-philosophy h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.teaching-philosophy p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.philosophy-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.philosophy-tags span {
+    background: var(--bg-primary);
+    color: var(--gold);
+    padding: 4px 16px;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.courses-taught h3,
+.student-feedback h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.course-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.course-card:hover {
+    border-color: var(--gold);
+    background: var(--bg-card-hover);
+}
+
+.course-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.course-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.course-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.course-meta {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.feedback-card {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.feedback-card:hover {
+    border-color: var(--gold);
+}
+
+.feedback-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.feedback-author {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ================================================================
+   CHESS SECTION
+   ================================================================ */
+#chess {
+    padding: 80px 0;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chess-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.chess-stat-card {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.chess-stat-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+}
+
+.chess-stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1.2;
+}
+
+.chess-stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+.chess-widget {
+    margin-bottom: 48px;
+}
+
+.widget-placeholder {
+    background: var(--bg-card);
+    border: 2px dashed var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    transition: border-color var(--transition-fast);
+}
+
+.widget-placeholder:hover {
+    border-color: var(--gold);
+}
+
+.widget-placeholder span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.widget-placeholder p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.widget-placeholder small {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.widget-placeholder-note {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.widget-placeholder-note code {
+    color: var(--gold);
+    font-size: 0.8rem;
+}
+
+.tournament-history h3,
+.notable-games h3,
+.chess-connection h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.tournament-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.tournament-card {
+    display: flex;
+    gap: 16px;
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+    align-items: center;
+}
+
+.tournament-card:hover {
+    border-color: var(--gold);
+}
+
+.tournament-rank {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.tournament-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.tournament-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.tournament-date {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.game-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+}
+
+.game-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.game-result {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 12px;
+    border-radius: 40px;
+    text-transform: uppercase;
+}
+
+.game-result.win {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+}
+
+.game-result.draw {
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+}
+
+.game-result.loss {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.game-date {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.game-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.game-card p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.game-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: color var(--transition-fast);
+}
+
+.game-link:hover {
+    color: var(--gold-light);
+}
+
+.chess-connection {
+    margin-top: 16px;
+}
+
+.connection-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 32px 36px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--gold);
+}
+
+.connection-card h3 {
+    margin-bottom: 12px;
+}
+
+.connection-card p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.connection-card p strong {
+    color: var(--gold);
+}
+
+.connection-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.connection-tags span {
+    background: var(--bg-primary);
+    color: var(--gold);
+    padding: 4px 16px;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* ================================================================
    ABOUT
    ================================================================ */
 #about {
@@ -975,7 +1322,7 @@ nav:not(.bottom-nav).scrolled {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 56px;
-    align-items: center;
+    align-items: start;
 }
 
 .about-text h2 {
@@ -1010,7 +1357,6 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-body);
 }
 
-/* Skills Section */
 .skills-section {
     margin: 24px 0 28px;
 }
@@ -1054,6 +1400,7 @@ nav:not(.bottom-nav).scrolled {
     overflow: hidden;
     border: 2px dashed var(--border-color);
     transition: border-color var(--transition-fast);
+    margin-bottom: 16px;
 }
 
 .image-placeholder-square:hover {
@@ -1064,6 +1411,28 @@ nav:not(.bottom-nav).scrolled {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.quick-info {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    border: 1px solid var(--border-color);
+}
+
+.quick-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.quick-info-item .quick-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 /* ================================================================
@@ -1127,6 +1496,30 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .contact-location:hover {
+    border-color: var(--gold);
+    color: var(--text-primary);
+}
+
+.contact-interests {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.interest-tag {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    padding: 4px 16px;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.interest-tag:hover {
     border-color: var(--gold);
     color: var(--text-primary);
 }
@@ -1232,8 +1625,16 @@ footer {
         justify-content: center;
     }
 
+    .hero-stats {
+        justify-content: center;
+    }
+
     .hero-buttons {
         justify-content: center;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .project-card {
@@ -1243,6 +1644,22 @@ footer {
 
     .project-card.reverse {
         direction: ltr;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feedback-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tournament-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .about-container {
@@ -1256,10 +1673,6 @@ footer {
         margin-right: auto;
     }
 
-    .about-equation {
-        text-align: left;
-    }
-
     .about-text p {
         max-width: 100%;
     }
@@ -1268,17 +1681,8 @@ footer {
         justify-content: center;
     }
 
-    .areas-grid {
+    .chess-stats-grid {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .experience-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 16px;
-    }
-
-    .exp-card:hover {
-        transform: translateY(-10px) scale(1.04);
     }
 
     #backToTop {
@@ -1287,6 +1691,10 @@ footer {
         width: 38px;
         height: 38px;
         font-size: 1.1rem;
+    }
+
+    .quick-info {
+        text-align: left;
     }
 }
 
@@ -1323,6 +1731,18 @@ footer {
         font-size: 1.8rem;
     }
 
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .hero-stat .stat-number {
+        font-size: 1.4rem;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
     .project-info h3 {
         font-size: 1.2rem;
     }
@@ -1331,16 +1751,6 @@ footer {
         flex-direction: column;
         gap: 4px;
         align-items: flex-start;
-    }
-
-    .areas-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
     }
 
     .pub-item {
@@ -1353,34 +1763,35 @@ footer {
         padding-left: 10px;
     }
 
-    .experience-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+    .courses-grid {
+        grid-template-columns: 1fr;
     }
 
-    .exp-card {
-        padding: 14px 10px 12px;
+    .feedback-grid {
+        grid-template-columns: 1fr;
     }
 
-    .exp-card:hover {
-        transform: translateY(-6px) scale(1.03);
+    .tournament-grid {
+        grid-template-columns: 1fr;
     }
 
-    .exp-logo-wrapper img {
-        padding: 6px;
+    .games-grid {
+        grid-template-columns: 1fr;
     }
 
-    .exp-card:hover .exp-logo-wrapper img {
-        transform: scale(1.08);
-        padding: 3px;
+    .chess-stats-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .exp-hover-details h4 {
-        font-size: 0.8rem;
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
 
-    .exp-hover-details p {
-        font-size: 0.7rem;
+    .contact-interests {
+        flex-direction: column;
+        align-items: center;
     }
 
     .scroll-indicator {
@@ -1391,6 +1802,18 @@ footer {
     .contact-location {
         font-size: 0.85rem;
         padding: 4px 16px;
+    }
+
+    .teaching-philosophy {
+        padding: 24px;
+    }
+
+    .connection-card {
+        padding: 24px;
+    }
+
+    .quick-info {
+        text-align: left;
     }
 
     #backToTop {
@@ -1423,13 +1846,13 @@ footer {
         font-size: 1.5rem;
     }
 
-    .experience-grid {
+    .chess-stats-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 12px;
     }
 
-    .exp-card {
-        padding: 10px 8px 10px;
+    .chess-stat-number {
+        font-size: 1.6rem;
     }
 
     .bottom-nav-link .bottom-nav-label {
@@ -1438,6 +1861,17 @@ footer {
 
     .bottom-nav-link .bottom-nav-icon {
         font-size: 1rem;
+    }
+
+    .course-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tournament-card {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
