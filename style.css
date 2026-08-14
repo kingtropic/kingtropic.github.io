@@ -2,27 +2,33 @@
    ROOT VARIABLES — Black & Gold
    ================================================================ */
 :root {
+    /* Backgrounds - Dark */
     --bg-primary: #0a0a0a;
     --bg-secondary: #111111;
     --bg-card: #181818;
     --bg-card-hover: #222222;
 
+    /* Text - Dark */
     --text-primary: #f5f5f5;
     --text-secondary: #b0b0b0;
     --text-muted: #6b6b6b;
 
+    /* Gold Accent */
     --gold: #d4af37;
     --gold-light: #e8c84a;
     --gold-dark: #a8872a;
     --gold-glow: rgba(212, 175, 55, 0.12);
     --gold-glow-strong: rgba(212, 175, 55, 0.25);
 
+    /* Borders */
     --border-color: #2a2518;
     --border-light: #333333;
 
+    /* Typography */
     --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
+    /* Transitions */
     --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
     --transition-fast: 0.2s var(--ease-out);
@@ -410,7 +416,7 @@ nav:not(.bottom-nav).scrolled {
 }
 
 /* ================================================================
-   HERO
+   HERO SECTION — Dark Mode
    ================================================================ */
 #hero {
     position: relative;
@@ -420,6 +426,7 @@ nav:not(.bottom-nav).scrolled {
     align-items: center;
     overflow: hidden;
     border-bottom: 1px solid var(--border-color);
+    background: var(--bg-primary);
 }
 
 .hero-glow {
@@ -472,6 +479,7 @@ nav:not(.bottom-nav).scrolled {
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: 18px;
+    color: var(--text-primary);
 }
 
 .tagline {
@@ -633,13 +641,316 @@ nav:not(.bottom-nav).scrolled {
 }
 
 /* ================================================================
-   RESEARCH SECTION
+   LIGHT MODE SECTIONS — Shared Styles
    ================================================================ */
-#research {
+
+/* Base light section styles */
+.section-light,
+.section-warm,
+.section-cool {
     padding: 80px 0;
-    background: var(--bg-secondary);
 }
 
+.section-light .section-title,
+.section-warm .section-title,
+.section-cool .section-title {
+    color: #0f172a;
+}
+
+.section-light .section-subtitle,
+.section-warm .section-subtitle,
+.section-cool .section-subtitle {
+    color: #475569;
+}
+
+.section-light .gold-line,
+.section-warm .gold-line,
+.section-cool .gold-line {
+    background: linear-gradient(90deg, #d4af37, #a8872a);
+}
+
+/* ================================================================
+   RESEARCH SECTION — Clean White Light Mode
+   ================================================================ */
+.section-light {
+    background: #ffffff;
+}
+
+.section-light .research-areas h3,
+.section-light .featured-projects h3,
+.section-light .publications-section h3 {
+    color: #0f172a;
+}
+
+.section-light .area-card {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+    color: #334155;
+}
+
+.section-light .area-card:hover {
+    border-color: #d4af37;
+    color: #0f172a;
+    background: #f1f5f9;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06), 0 0 24px rgba(212, 175, 55, 0.12);
+}
+
+.section-light .project-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+.section-light .project-card:hover {
+    border-color: #d4af37;
+    background: #f8fafc;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06), 0 0 40px rgba(212, 175, 55, 0.08);
+}
+
+.section-light .project-category {
+    color: #d4af37;
+}
+
+.section-light .project-info h3 {
+    color: #0f172a;
+}
+
+.section-light .project-brief {
+    color: #475569;
+}
+
+.section-light .project-stats {
+    color: #94a3b8;
+}
+
+.section-light .project-stats strong {
+    color: #d4af37;
+}
+
+.section-light .project-year {
+    background: rgba(255, 255, 255, 0.9);
+    color: #d4af37;
+    border-color: #e2e8f0;
+}
+
+.section-light .project-link {
+    color: #d4af37;
+}
+
+.section-light .project-link:hover {
+    color: #a8872a;
+}
+
+.section-light .pub-item {
+    border-color: #e2e8f0;
+}
+
+.section-light .pub-item:hover {
+    background: #f8fafc;
+    border-color: #d4af37;
+}
+
+.section-light .pub-year {
+    color: #d4af37;
+}
+
+.section-light .pub-item p {
+    color: #334155;
+}
+
+.section-light .pub-conf {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    color: #64748b;
+}
+
+.section-light .pub-status {
+    color: #d4af37;
+}
+
+/* ================================================================
+   TEACHING SECTION — Warm Light Mode
+   ================================================================ */
+.section-warm {
+    background: #faf8f5;
+}
+
+.section-warm .teaching-philosophy h3,
+.section-warm .courses-taught h3,
+.section-warm .student-feedback h3 {
+    color: #1a1410;
+}
+
+.section-warm .teaching-philosophy {
+    background: #ffffff;
+    border-color: #e8e0d8;
+}
+
+.section-warm .teaching-philosophy p {
+    color: #3d352e;
+}
+
+.section-warm .philosophy-tags span {
+    background: #faf8f5;
+    border-color: #e8e0d8;
+    color: #d4af37;
+}
+
+.section-warm .course-card {
+    background: #ffffff;
+    border-color: #e8e0d8;
+}
+
+.section-warm .course-card:hover {
+    border-color: #d4af37;
+    background: #fdfcfa;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.section-warm .course-info h4 {
+    color: #1a1410;
+}
+
+.section-warm .course-info p {
+    color: #6b6560;
+}
+
+.section-warm .course-meta {
+    color: #d4af37;
+}
+
+.section-warm .feedback-card {
+    background: #ffffff;
+    border-color: #e8e0d8;
+}
+
+.section-warm .feedback-card:hover {
+    border-color: #d4af37;
+}
+
+.section-warm .feedback-card p {
+    color: #3d352e;
+}
+
+.section-warm .feedback-author {
+    color: #6b6560;
+}
+
+/* ================================================================
+   CHESS SECTION — Cool Light Mode
+   ================================================================ */
+.section-cool {
+    background: #f8fafc;
+}
+
+.section-cool .chess-stat-number {
+    color: #d4af37;
+}
+
+.section-cool .chess-stat-label {
+    color: #64748b;
+}
+
+.section-cool .chess-stat-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+.section-cool .chess-stat-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05), 0 0 24px rgba(212, 175, 55, 0.08);
+}
+
+.section-cool .widget-placeholder {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+.section-cool .widget-placeholder:hover {
+    border-color: #d4af37;
+}
+
+.section-cool .widget-placeholder p {
+    color: #0f172a;
+}
+
+.section-cool .widget-placeholder-note {
+    background: #f8fafc;
+}
+
+.section-cool .tournament-history h3,
+.section-cool .notable-games h3,
+.section-cool .chess-connection h3 {
+    color: #0f172a;
+}
+
+.section-cool .tournament-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+.section-cool .tournament-card:hover {
+    border-color: #d4af37;
+}
+
+.section-cool .tournament-info h4 {
+    color: #0f172a;
+}
+
+.section-cool .tournament-info p {
+    color: #475569;
+}
+
+.section-cool .tournament-date {
+    color: #94a3b8;
+}
+
+.section-cool .game-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+.section-cool .game-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-4px);
+}
+
+.section-cool .game-card h4 {
+    color: #0f172a;
+}
+
+.section-cool .game-card p {
+    color: #475569;
+}
+
+.section-cool .game-link {
+    color: #d4af37;
+}
+
+.section-cool .game-link:hover {
+    color: #a8872a;
+}
+
+.section-cool .connection-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    border-left-color: #d4af37;
+}
+
+.section-cool .connection-card p {
+    color: #334155;
+}
+
+.section-cool .connection-tags span {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+    color: #d4af37;
+}
+
+/* ================================================================
+   RESEARCH, TEACHING, CHESS — Shared Structure Styles
+   ================================================================ */
+
+/* Research Areas */
 .research-areas {
     margin-bottom: 48px;
 }
@@ -650,7 +961,6 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-heading);
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-primary);
     margin-bottom: 16px;
 }
 
@@ -661,25 +971,15 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .area-card {
-    background: var(--bg-card);
     padding: 18px;
     text-align: center;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     font-weight: 500;
-    color: var(--text-secondary);
-    transition: all var(--transition-fast);
     font-size: 0.95rem;
     letter-spacing: 0.3px;
     cursor: default;
-}
-
-.area-card:hover {
-    border-color: var(--gold);
-    color: var(--text-primary);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px var(--gold-glow);
-    background: var(--bg-card-hover);
+    transition: all var(--transition-fast);
 }
 
 .featured-projects {
@@ -690,19 +990,11 @@ nav:not(.bottom-nav).scrolled {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    background: var(--bg-card);
     border-radius: 20px;
     padding: 36px;
     margin-bottom: 32px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     transition: all var(--transition-med);
-}
-
-.project-card:hover {
-    border-color: var(--gold);
-    background: var(--bg-card-hover);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px var(--gold-glow);
-    transform: translateY(-4px);
 }
 
 .project-card.reverse {
@@ -721,8 +1013,7 @@ nav:not(.bottom-nav).scrolled {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    background: var(--bg-primary);
-    border: 1px solid var(--border-light);
+    border: 1px solid;
 }
 
 .image-placeholder {
@@ -752,12 +1043,11 @@ nav:not(.bottom-nav).scrolled {
     right: 14px;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(8px);
-    color: var(--gold);
     padding: 3px 14px;
     border-radius: 40px;
     font-size: 0.7rem;
     font-weight: 600;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     letter-spacing: 0.3px;
 }
 
@@ -770,7 +1060,6 @@ nav:not(.bottom-nav).scrolled {
 .project-category {
     font-size: 0.7rem;
     font-weight: 600;
-    color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 6px;
@@ -786,7 +1075,6 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .project-brief {
-    color: var(--text-secondary);
     margin-bottom: 16px;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -799,19 +1087,16 @@ nav:not(.bottom-nav).scrolled {
     gap: 12px 28px;
     margin-bottom: 20px;
     font-size: 0.9rem;
-    color: var(--text-muted);
     font-weight: 300;
 }
 
 .project-stats strong {
-    color: var(--gold);
     font-weight: 700;
     font-family: var(--font-heading);
     margin-right: 4px;
 }
 
 .project-link {
-    color: var(--gold);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -823,9 +1108,9 @@ nav:not(.bottom-nav).scrolled {
 
 .project-link:hover {
     gap: 14px;
-    color: var(--gold-light);
 }
 
+/* Publications */
 .publications-section h3 {
     margin-bottom: 16px;
 }
@@ -838,7 +1123,7 @@ nav:not(.bottom-nav).scrolled {
     display: flex;
     gap: 28px;
     padding: 14px 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid;
     align-items: baseline;
     transition: all var(--transition-fast);
     padding-left: 10px;
@@ -846,27 +1131,22 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .pub-item:hover {
-    background: var(--bg-card);
     padding-left: 18px;
-    border-color: var(--gold);
 }
 
 .pub-year {
     font-family: var(--font-heading);
-    color: var(--gold);
     font-weight: 700;
     min-width: 56px;
     font-size: 0.9rem;
 }
 
 .pub-item p {
-    color: var(--text-secondary);
     font-size: 0.98rem;
     font-weight: 300;
 }
 
 .pub-status {
-    color: var(--gold);
     font-size: 0.75rem;
     margin-left: 10px;
     font-weight: 600;
@@ -874,31 +1154,19 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .pub-conf {
-    color: var(--text-muted);
     font-size: 0.75rem;
     margin-left: 10px;
-    background: var(--bg-card);
     padding: 2px 12px;
     border-radius: 20px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     font-weight: 400;
 }
 
-/* ================================================================
-   TEACHING SECTION
-   ================================================================ */
-#teaching {
-    padding: 80px 0;
-    background: var(--bg-primary);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-}
-
+/* Teaching */
 .teaching-philosophy {
-    background: var(--bg-card);
     border-radius: 16px;
     padding: 32px 36px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     margin-bottom: 48px;
 }
 
@@ -906,12 +1174,10 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-heading);
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-primary);
     margin-bottom: 12px;
 }
 
 .teaching-philosophy p {
-    color: var(--text-secondary);
     font-size: 1.05rem;
     font-weight: 300;
     line-height: 1.8;
@@ -926,11 +1192,9 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .philosophy-tags span {
-    background: var(--bg-primary);
-    color: var(--gold);
     padding: 4px 16px;
     border-radius: 40px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     font-size: 0.8rem;
     font-weight: 500;
 }
@@ -940,7 +1204,6 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-heading);
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-primary);
     margin-bottom: 16px;
 }
 
@@ -955,16 +1218,10 @@ nav:not(.bottom-nav).scrolled {
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    background: var(--bg-card);
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     transition: all var(--transition-fast);
-}
-
-.course-card:hover {
-    border-color: var(--gold);
-    background: var(--bg-card-hover);
 }
 
 .course-icon {
@@ -977,12 +1234,10 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--text-primary);
     margin-bottom: 2px;
 }
 
 .course-info p {
-    color: var(--text-secondary);
     font-size: 0.9rem;
     font-weight: 300;
 }
@@ -990,7 +1245,6 @@ nav:not(.bottom-nav).scrolled {
 .course-meta {
     display: inline-block;
     font-size: 0.75rem;
-    color: var(--gold);
     font-weight: 500;
     margin-top: 4px;
 }
@@ -1002,19 +1256,13 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .feedback-card {
-    background: var(--bg-card);
     padding: 24px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     transition: all var(--transition-fast);
 }
 
-.feedback-card:hover {
-    border-color: var(--gold);
-}
-
 .feedback-card p {
-    color: var(--text-secondary);
     font-size: 0.95rem;
     font-weight: 300;
     line-height: 1.6;
@@ -1025,20 +1273,10 @@ nav:not(.bottom-nav).scrolled {
     display: block;
     margin-top: 12px;
     font-size: 0.8rem;
-    color: var(--text-muted);
     font-weight: 500;
 }
 
-/* ================================================================
-   CHESS SECTION
-   ================================================================ */
-#chess {
-    padding: 80px 0;
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-}
-
+/* Chess */
 .chess-stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1047,17 +1285,11 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .chess-stat-card {
-    background: var(--bg-card);
     padding: 24px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     text-align: center;
     transition: all var(--transition-fast);
-}
-
-.chess-stat-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
 }
 
 .chess-stat-number {
@@ -1065,14 +1297,12 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-heading);
     font-size: 2.2rem;
     font-weight: 800;
-    color: var(--gold);
     line-height: 1.2;
 }
 
 .chess-stat-label {
     display: block;
     font-size: 0.8rem;
-    color: var(--text-secondary);
     font-weight: 300;
     margin-top: 4px;
 }
@@ -1082,16 +1312,11 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .widget-placeholder {
-    background: var(--bg-card);
-    border: 2px dashed var(--border-color);
+    border: 2px dashed;
     border-radius: 16px;
     padding: 40px;
     text-align: center;
     transition: border-color var(--transition-fast);
-}
-
-.widget-placeholder:hover {
-    border-color: var(--gold);
 }
 
 .widget-placeholder span {
@@ -1101,26 +1326,22 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .widget-placeholder p {
-    color: var(--text-secondary);
     font-size: 1.1rem;
     font-weight: 500;
 }
 
 .widget-placeholder small {
-    color: var(--text-muted);
     font-size: 0.85rem;
 }
 
 .widget-placeholder-note {
     margin-top: 12px;
     padding: 8px 16px;
-    background: var(--bg-primary);
     border-radius: 8px;
     display: inline-block;
 }
 
 .widget-placeholder-note code {
-    color: var(--gold);
     font-size: 0.8rem;
 }
 
@@ -1130,7 +1351,6 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-heading);
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-primary);
     margin-bottom: 16px;
 }
 
@@ -1144,16 +1364,11 @@ nav:not(.bottom-nav).scrolled {
 .tournament-card {
     display: flex;
     gap: 16px;
-    background: var(--bg-card);
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     transition: all var(--transition-fast);
     align-items: center;
-}
-
-.tournament-card:hover {
-    border-color: var(--gold);
 }
 
 .tournament-rank {
@@ -1165,12 +1380,10 @@ nav:not(.bottom-nav).scrolled {
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--text-primary);
     margin-bottom: 2px;
 }
 
 .tournament-info p {
-    color: var(--text-secondary);
     font-size: 0.9rem;
     font-weight: 300;
 }
@@ -1178,7 +1391,6 @@ nav:not(.bottom-nav).scrolled {
 .tournament-date {
     display: inline-block;
     font-size: 0.75rem;
-    color: var(--text-muted);
     margin-top: 4px;
 }
 
@@ -1190,16 +1402,10 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .game-card {
-    background: var(--bg-card);
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     transition: all var(--transition-fast);
-}
-
-.game-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
 }
 
 .game-header {
@@ -1234,34 +1440,26 @@ nav:not(.bottom-nav).scrolled {
 
 .game-date {
     font-size: 0.7rem;
-    color: var(--text-muted);
 }
 
 .game-card h4 {
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--text-primary);
     margin-bottom: 4px;
 }
 
 .game-card p {
-    color: var(--text-secondary);
     font-size: 0.85rem;
     font-weight: 300;
     margin-bottom: 12px;
 }
 
 .game-link {
-    color: var(--gold);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.85rem;
     transition: color var(--transition-fast);
-}
-
-.game-link:hover {
-    color: var(--gold-light);
 }
 
 .chess-connection {
@@ -1269,11 +1467,10 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .connection-card {
-    background: var(--bg-card);
     border-radius: 16px;
     padding: 32px 36px;
-    border: 1px solid var(--border-color);
-    border-left: 4px solid var(--gold);
+    border: 1px solid;
+    border-left-width: 4px;
 }
 
 .connection-card h3 {
@@ -1281,7 +1478,6 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .connection-card p {
-    color: var(--text-secondary);
     font-size: 1.05rem;
     font-weight: 300;
     line-height: 1.8;
@@ -1300,17 +1496,15 @@ nav:not(.bottom-nav).scrolled {
 }
 
 .connection-tags span {
-    background: var(--bg-primary);
-    color: var(--gold);
     padding: 4px 16px;
     border-radius: 40px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     font-size: 0.8rem;
     font-weight: 500;
 }
 
 /* ================================================================
-   ABOUT
+   ABOUT SECTION — Dark Mode (Matches Hero)
    ================================================================ */
 #about {
     padding: 80px 0;
@@ -1330,6 +1524,7 @@ nav:not(.bottom-nav).scrolled {
     font-size: clamp(2rem, 3.5vw, 2.8rem);
     font-weight: 700;
     margin-bottom: 4px;
+    color: var(--text-primary);
 }
 
 .about-text .gold-line {
@@ -1436,7 +1631,7 @@ nav:not(.bottom-nav).scrolled {
 }
 
 /* ================================================================
-   CONTACT
+   CONTACT SECTION — Dark Mode (Matches Hero)
    ================================================================ */
 #contact {
     padding: 72px 0 56px;
@@ -1446,6 +1641,7 @@ nav:not(.bottom-nav).scrolled {
 
 #contact .section-title {
     margin-bottom: 2px;
+    color: var(--text-primary);
 }
 
 #contact .gold-line {
@@ -1814,6 +2010,23 @@ footer {
 
     .quick-info {
         text-align: left;
+    }
+
+    .section-light .project-stats {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+    }
+
+    .section-warm .course-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-cool .tournament-card {
+        flex-direction: column;
+        text-align: center;
     }
 
     #backToTop {
