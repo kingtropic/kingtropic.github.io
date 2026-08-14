@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
 });
 
 // ================================================================
-// MOBILE MENU
+// MOBILE MENU (Top Navigation)
 // ================================================================
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -32,7 +32,7 @@ document.querySelectorAll('.nav-links a').forEach((link) => {
 });
 
 // ================================================================
-// SMOOTH SCROLL
+// SMOOTH SCROLL (All anchor links)
 // ================================================================
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
@@ -42,7 +42,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         const target = document.querySelector(targetId);
         if (target) {
             e.preventDefault();
-            const navHeight = document.querySelector('nav').offsetHeight;
+            const navHeight = document.querySelector('nav:not(.bottom-nav)').offsetHeight;
             const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
             window.scrollTo({ top: targetPos, behavior: 'smooth' });
@@ -53,9 +53,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // ================================================================
 // NAVIGATION ACTIVE STATE & SCROLL EFFECTS
 // ================================================================
-const sections = document.querySelectorAll('section[id]');
-const navLinksAll = document.querySelectorAll('.nav-link');
-const nav = document.querySelector('nav');
+const sections = document.querySelectorAll('section[id], header[id]');
+const topNavLinks = document.querySelectorAll('.nav-link');
+const bottomNavLinks = document.querySelectorAll('.bottom-nav-link');
+const topNav = document.querySelector('nav:not(.bottom-nav)');
 const backToTop = document.getElementById('backToTop');
 
 let ticking = false;
@@ -64,20 +65,20 @@ window.addEventListener('scroll', () => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
             const scrollY = window.scrollY;
+            const offset = 120;
 
-            // Nav background
-            if (nav) {
-                nav.classList.toggle('scrolled', scrollY > 50);
+            // Top nav background
+            if (topNav) {
+                topNav.classList.toggle('scrolled', scrollY > 50);
             }
 
-            // Back to top
+            // Back to top button
             if (backToTop) {
                 backToTop.classList.toggle('visible', scrollY > 400);
             }
 
-            // Active section
+            // Active section detection
             let current = '';
-            const offset = 120;
             sections.forEach((section) => {
                 const top = section.offsetTop;
                 const height = section.offsetHeight;
@@ -86,8 +87,14 @@ window.addEventListener('scroll', () => {
                 }
             });
 
-            navLinksAll.forEach((link) => {
+            // Update top navigation
+            topNavLinks.forEach((link) => {
                 link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+
+            // Update bottom navigation
+            bottomNavLinks.forEach((link) => {
+                link.classList.toggle('active', link.dataset.section === current);
             });
 
             ticking = false;
@@ -106,7 +113,7 @@ if (backToTop) {
 }
 
 // ================================================================
-// SCROLL REVEAL
+// SCROLL REVEAL (Intersection Observer)
 // ================================================================
 const revealElements = document.querySelectorAll('.reveal');
 
@@ -127,10 +134,23 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((el) => revealObserver.observe(el));
 
 // ================================================================
-// CONSOLE
+// CONSOLE WELCOME
 // ================================================================
-console.log('╔═══════════════════════════════════════╗');
-console.log('║   GAJITHA NANAYAKKARA                ║');
-console.log('║   Robotics Engineer & Researcher     ║');
-console.log('║   Built with ❤️ & GitHub Pages       ║');
-console.log('╚═══════════════════════════════════════╝');
+console.log('╔════════════════════════════════════════╗');
+console.log('║   GAJITHA NANAYAKKARA                 ║');
+console.log('║   Robotics Engineer & Researcher      ║');
+console.log('║   Surgical Robotics · HRI · Design    ║');
+console.log('║   Built with ❤️ & GitHub Pages        ║');
+console.log('╚════════════════════════════════════════╝');
+
+// ================================================================
+// KEYBOARD NAVIGATION FOR HAMBURGER (Accessibility)
+// ================================================================
+if (hamburger) {
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            hamburger.click();
+        }
+    });
+}
