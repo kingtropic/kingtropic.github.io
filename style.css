@@ -1029,12 +1029,16 @@ nav:not(.bottom-nav).scrolled {
 }
 
 /* ================================================================
-   CONTACT SECTION — Dark Mode
+   CONTACT SECTION — Dark Mode (Decluttered)
    ================================================================ */
 #contact {
-    padding: 72px 0 56px;
+    padding: 60px 0 50px;
     background: var(--bg-primary);
     text-align: center;
+}
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
 }
 #contact .section-title {
     margin-bottom: 2px;
@@ -1043,22 +1047,41 @@ nav:not(.bottom-nav).scrolled {
 #contact .gold-line {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
-.contact-content p {
+.contact-description {
     color: var(--text-secondary);
     font-size: 1.05rem;
     max-width: 500px;
     margin: 0 auto 28px;
     font-weight: 300;
 }
-.contact-info {
+
+/* Primary CTA Button */
+.contact-cta-wrapper {
+    margin-bottom: 40px;
+}
+.contact-cta {
+    display: inline-block;
+    padding: 14px 48px;
+    font-size: 1.05rem;
+}
+
+/* Contact Details Grouped */
+.contact-details {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-methods {
+    display: flex;
     flex-wrap: wrap;
-    gap: 16px 32px;
-    margin-bottom: 28px;
-    font-size: 0.95rem;
+    justify-content: center;
+    gap: 12px 24px;
 }
 .contact-link {
     background: var(--bg-card);
@@ -1068,6 +1091,7 @@ nav:not(.bottom-nav).scrolled {
     color: var(--text-secondary);
     text-decoration: none;
     transition: all var(--transition-fast);
+    font-size: 0.95rem;
 }
 .contact-link:hover {
     border-color: var(--gold);
@@ -1080,17 +1104,18 @@ nav:not(.bottom-nav).scrolled {
     border: 1px solid var(--border-color);
     color: var(--text-secondary);
     transition: all var(--transition-fast);
+    font-size: 0.95rem;
 }
 .contact-location:hover {
     border-color: var(--gold);
     color: var(--text-primary);
 }
+
 .contact-interests {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 32px;
+    gap: 10px;
 }
 .interest-tag {
     background: var(--bg-card);
@@ -1098,7 +1123,7 @@ nav:not(.bottom-nav).scrolled {
     padding: 4px 16px;
     border-radius: 40px;
     border: 1px solid var(--border-color);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
     transition: all var(--transition-fast);
 }
@@ -1106,22 +1131,23 @@ nav:not(.bottom-nav).scrolled {
     border-color: var(--gold);
     color: var(--text-primary);
 }
+
 .social-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 12px;
 }
 .social-btn {
     background: var(--bg-card);
     color: var(--text-secondary);
-    padding: 8px 28px;
+    padding: 6px 20px;
     border-radius: 60px;
     text-decoration: none;
     font-weight: 500;
     border: 1px solid var(--border-color);
     transition: all var(--transition-fast);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 .social-btn:hover {
     background: var(--gold);
@@ -1132,21 +1158,46 @@ nav:not(.bottom-nav).scrolled {
 }
 
 /* ================================================================
-   FOOTER
+   FOOTER — Clean & Minimal
    ================================================================ */
 footer {
     background: var(--bg-primary);
     border-top: 1px solid var(--border-color);
-    padding: 24px 0;
-    text-align: center;
+    padding: 16px 0;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-container p {
     color: var(--text-muted);
     font-size: 0.8rem;
     font-weight: 300;
     letter-spacing: 0.3px;
+    margin: 0;
+}
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--gold);
+    color: var(--bg-primary);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all var(--transition-fast);
+}
+.back-to-top:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px var(--gold-glow);
 }
 
 /* ================================================================
-   BACK TO TOP
+   BACK TO TOP (Floating Button)
    ================================================================ */
 #backToTop {
     position: fixed;
@@ -1247,6 +1298,9 @@ footer {
     .quick-info {
         text-align: left;
     }
+    .contact-methods {
+        gap: 10px 16px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1345,6 +1399,24 @@ footer {
         height: 34px;
         font-size: 1rem;
     }
+    .contact-cta {
+        padding: 12px 32px;
+        font-size: 0.95rem;
+    }
+    .contact-details {
+        gap: 20px;
+        padding-top: 24px;
+    }
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1371,6 +1443,12 @@ footer {
     }
     .inquiry-section {
         padding: 14px 16px;
+    }
+    .contact-cta {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 260px;
     }
 }
 
